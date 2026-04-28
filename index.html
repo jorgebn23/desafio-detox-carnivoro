@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="robots" content="index, follow">
+<title>Desafio 21 Dias Sem Fome — Emagrecer Sem Fome e Sem Inchaço</title>
+<meta name="description" content="Plano de alta proteína para desinchar, controlar a fome e voltar a emagrecer sem academia e sem contar calorias. Acesso por R$29 com garantia de 30 dias.">
+<meta property="og:title" content="Desafio 21 Dias Sem Fome">
+<meta property="og:description" content="Plano de 21 dias para controlar a fome, desinchar e voltar a emagrecer com refeições simples.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- META PIXEL CODE HERE -->
+<!-- Substituir PIXEL_ID_AQUI pelo ID real do pixel Meta antes de publicar -->
+<!--
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'PIXEL_ID_AQUI');
+fbq('track', 'PageView');
+</script>
+-->
+
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:16px;line-height:1.6;color:#171717;background:#fff;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none}
+  .container{width:100%;max-width:520px;margin:0 auto;padding:0 20px}
+  .center{text-align:center}
+  .mt-md{margin-top:18px}
+  section{padding:36px 0}
+  section.alt{background:#f9f9f9}
+  h2{font-size:22px;font-weight:800;line-height:1.3;margin-bottom:18px;color:#171717;text-align:center}
+  h2 strong{color:#e11d48}
+  h3{font-size:17px;font-weight:700;margin-bottom:10px;color:#171717}
+  p{margin-bottom:14px;color:#333}
+
+  /* === QUIZ === */
+  .quiz-gate{min-height:100vh;background:linear-gradient(180deg,#fff1f2 0%,#fff 70%);padding:28px 0 40px;display:flex;align-items:flex-start}
+  .quiz-card{width:100%;background:#fff;border:1px solid #f1d5db;border-radius:16px;padding:22px;box-shadow:0 18px 40px rgba(190,18,60,.12)}
+  .quiz-kicker{font-size:12px;font-weight:800;color:#e11d48;letter-spacing:1px;text-transform:uppercase;text-align:center;margin-bottom:14px}
+  .quiz-card h1{font-size:25px;line-height:1.22;text-align:center;margin-bottom:12px}
+  .quiz-card h1 strong{color:#e11d48}
+  .quiz-card .sub{font-size:15px;color:#4b5563;text-align:center;margin-bottom:18px}
+  .quiz-progress{height:8px;background:#f3f4f6;border-radius:999px;overflow:hidden;margin:18px 0}
+  .quiz-progress span{display:block;height:100%;width:20%;background:#e11d48;border-radius:999px;transition:width .2s}
+  .quiz-question{font-size:18px;font-weight:800;line-height:1.3;text-align:center;margin-bottom:16px}
+  .quiz-options{display:grid;gap:10px}
+  .quiz-option{width:100%;text-align:left;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px 15px;font-size:15px;font-weight:600;color:#222;transition:border .15s,background .15s}
+  .quiz-option:hover,.quiz-option:focus{border-color:#e11d48;background:#fff1f2}
+  .quiz-result{display:none}
+  .quiz-result.show{display:block}
+  .quiz-result-box{background:#f0fdf4;border:1px solid #16a34a;border-radius:12px;padding:16px;margin:16px 0;color:#14532d}
+  .quiz-result-box p{color:#14532d;margin:0;font-size:14px}
+  .quiz-note{font-size:12px;text-align:center;color:#6b7280;margin-top:12px}
+  .sales-page{display:none}
+  body.show-sales .sales-page{display:block}
+  body.show-sales .quiz-gate{display:none}
+
+  /* === HERO === */
+  .hero{background:linear-gradient(180deg,#fff1f2 0%,#fff 100%);padding:32px 0 40px;text-align:center}
+  .hero-logo{font-size:13px;font-weight:800;color:#e11d48;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+  .authority-line{font-size:13px;color:#525252;margin-bottom:20px}
+  .hero h1{font-size:27px;font-weight:800;line-height:1.2;margin-bottom:16px;color:#171717}
+  .hero h1 strong{color:#e11d48}
+  .hero p.sub{font-size:16px;color:#444;margin-bottom:18px;line-height:1.5}
+  .creative-slot{border:2px dashed #f43f5e;background:#fff7f8;color:#9f1239;border-radius:14px;padding:16px;margin:18px 0;text-align:center}
+  .creative-slot strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+  .creative-slot span{font-size:13px;color:#7f1d1d}
+  .cta-btn{display:block;width:100%;background:#16a34a;color:#fff;font-size:16px;font-weight:800;padding:18px 18px;border-radius:10px;text-align:center;text-transform:uppercase;letter-spacing:.2px;box-shadow:0 4px 12px rgba(22,163,74,.25);transition:transform .15s,box-shadow .15s}
+  .cta-btn:hover,.cta-btn:focus{transform:translateY(-2px);box-shadow:0 6px 16px rgba(22,163,74,.35)}
+  .cta-btn:active{transform:translateY(0)}
+  .micro{font-size:13px;color:#666;margin-top:12px;line-height:1.4}
+
+  /* === TRUST === */
+  .social-bar{background:#171717;color:#fff;padding:14px 20px;text-align:center;font-size:14px;font-weight:600}
+  .social-bar .stars{color:#fbbf24;letter-spacing:1px;margin-right:6px}
+  .badges{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
+  .badge{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:11px 12px;font-size:13px;color:#333;text-align:left}
+
+  /* === CONTENT === */
+  .dor p{font-size:16px;line-height:1.65}
+  .callout{background:#171717;color:#fff;border-radius:14px;padding:18px;margin-top:18px}
+  .callout p{color:#fff;margin:0;font-weight:600}
+  .step{background:#fff;border:1px solid #eaeaea;border-radius:12px;padding:18px;margin-bottom:14px;display:flex;gap:14px;align-items:flex-start}
+  .step .num{flex-shrink:0;width:36px;height:36px;background:#e11d48;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px}
+  .step h3{margin-bottom:6px;font-size:16px}
+  .step p{font-size:14px;margin:0;color:#555}
+  .benefits{display:grid;grid-template-columns:1fr;gap:12px}
+  .benefit{background:#fff;border:1px solid #eaeaea;border-radius:10px;padding:14px;display:flex;gap:12px;align-items:flex-start}
+  .benefit svg{flex-shrink:0;width:24px;height:24px;color:#16a34a;margin-top:2px}
+  .benefit p{margin:0;font-size:15px;line-height:1.5;color:#333}
+
+  /* === DEPOIMENTOS === */
+  .testimonial{background:#fff;border:1px solid #eaeaea;border-radius:12px;padding:18px;margin-bottom:14px}
+  .testimonial-head{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+  .avatar{width:48px;height:48px;border-radius:50%;background:#fff1f2;display:flex;align-items:center;justify-content:center;font-weight:800;color:#e11d48;font-size:18px;flex-shrink:0}
+  .testimonial-name{font-weight:800;font-size:15px;color:#171717}
+  .testimonial-meta{font-size:13px;color:#666}
+  .testimonial-stars{color:#fbbf24;font-size:14px;letter-spacing:1px;margin-bottom:8px}
+  .testimonial p{font-size:14px;line-height:1.55;color:#444;margin:0;font-style:italic}
+
+  /* === OFERTA === */
+  .oferta-box{background:#fff;border:2px solid #e11d48;border-radius:14px;padding:24px 18px;text-align:center}
+  .oferta-list{text-align:left;margin:18px 0;list-style:none;padding:0}
+  .oferta-list li{padding:8px 0;font-size:15px;display:flex;gap:8px;align-items:flex-start}
+  .oferta-list li::before{content:"✓";color:#16a34a;font-weight:800;flex-shrink:0}
+  .price-old{font-size:16px;color:#999;text-decoration:line-through;margin-bottom:4px}
+  .price-new{font-size:52px;font-weight:800;color:#e11d48;line-height:1;margin-bottom:6px}
+  .price-cents{font-size:24px;vertical-align:top}
+  .price-meta{font-size:13px;color:#666;margin-bottom:12px}
+  .guarantee-inline{display:flex;gap:10px;align-items:center;justify-content:center;background:#f0fdf4;border:1px solid #16a34a;border-radius:8px;padding:10px 14px;margin:12px 0;font-size:13px;color:#15803d;font-weight:700}
+  .guarantee-inline svg{width:20px;height:20px;flex-shrink:0}
+  .bonus-card{background:#fffbf0;border:1px dashed #f59e0b;border-radius:10px;padding:14px;margin-bottom:12px;display:flex;gap:12px;align-items:flex-start}
+  .bonus-card svg{flex-shrink:0;width:24px;height:24px;color:#f59e0b;margin-top:2px}
+  .bonus-card h3{margin-bottom:4px;font-size:15px;color:#92400e}
+  .bonus-card p{margin:0;font-size:13px;color:#555}
+
+  /* === COUNTDOWN / GARANTIA / FAQ / FORM === */
+  .countdown{background:#171717;color:#fff;padding:20px;border-radius:12px;text-align:center}
+  .countdown-label{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:#fbbf24;margin-bottom:10px;font-weight:700}
+  .countdown-timer{font-size:36px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:2px}
+  .countdown-meta{font-size:13px;color:#ccc;margin-top:8px}
+  .garantia{background:#f0fdf4;border:1px solid #16a34a;border-radius:12px;padding:20px;text-align:center}
+  .garantia svg{width:56px;height:56px;color:#16a34a;margin:0 auto 12px}
+  .garantia h3{color:#15803d;margin-bottom:8px}
+  .garantia p{font-size:14px;color:#444;margin:0}
+  .faq-item{border-bottom:1px solid #eaeaea}
+  .faq-q{width:100%;background:transparent;padding:16px 0;text-align:left;font-size:15px;font-weight:700;color:#171717;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq-q .icon{flex-shrink:0;font-size:20px;color:#e11d48;font-weight:500;transition:transform .2s}
+  .faq-item.open .faq-q .icon{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:14px;color:#555;line-height:1.6}
+  .faq-item.open .faq-a{max-height:420px;padding-bottom:16px}
+  .lead-form{background:#fff;border:2px solid #171717;border-radius:14px;padding:22px}
+  .lead-form label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#171717}
+  .lead-form input{width:100%;padding:14px;border:1px solid #ddd;border-radius:8px;font-size:16px;font-family:inherit;margin-bottom:14px;-webkit-appearance:none}
+  .lead-form input:focus{outline:none;border-color:#e11d48}
+  .lead-form .err{color:#e11d48;font-size:12px;margin-top:-10px;margin-bottom:10px;display:none}
+  .lead-form .err.show{display:block}
+  footer{background:#171717;color:#bbb;padding:28px 0;font-size:13px;text-align:center;line-height:1.7}
+  footer p{color:#bbb;margin-bottom:8px}
+  footer a{color:#fff;text-decoration:underline}
+  .legal{font-size:11px;color:#888;margin-top:14px;line-height:1.5}
+
+  @media (min-width:768px){
+    .container{max-width:680px}
+    .hero h1,.quiz-card h1{font-size:38px}
+    .hero p.sub{font-size:18px}
+    h2{font-size:28px}
+    .benefits,.badges{grid-template-columns:1fr 1fr;gap:14px}
+    .price-new{font-size:64px}
+  }
+</style>
+</head>
+<body>
+
+<!-- 0. QUIZ DE ENTRADA -->
+<section class="quiz-gate" id="quizGate">
+  <div class="container">
+    <div class="quiz-card">
+      <div class="quiz-kicker">Teste rápido gratuito</div>
+      <h1>Descubra por que seu corpo <strong>não responde mais</strong></h1>
+      <p class="sub">Responda 5 perguntas e veja se o plano de 21 dias faz sentido para o seu momento.</p>
+
+      <div id="quizSteps">
+        <div class="quiz-progress"><span id="quizProgress"></span></div>
+        <div class="quiz-question" id="quizQuestion">Qual é seu principal objetivo hoje?</div>
+        <div class="quiz-options" id="quizOptions">
+          <button type="button" class="quiz-option">Emagrecer</button>
+          <button type="button" class="quiz-option">Desinchar</button>
+          <button type="button" class="quiz-option">Controlar a fome</button>
+          <button type="button" class="quiz-option">Ter mais disposição</button>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="quizResult">
+        <div class="quiz-result-box">
+          <p><strong>Resultado:</strong> pelo que você respondeu, o melhor caminho é um plano simples de alta proteína, com foco em saciedade, menos inchaço e rotina fácil de seguir.</p>
+        </div>
+        <a href="#topo" class="cta-btn" id="showSales">VER MEU PLANO DE 21 DIAS — R$29</a>
+        <p class="quiz-note">Não é diagnóstico médico. Resultados variam de pessoa para pessoa.</p>
+      </div>
+
+      <p class="quiz-note">Dados usados apenas para personalizar sua experiência nesta página.</p>
+    </div>
+  </div>
+</section>
+
+<div class="sales-page" id="salesPage">
+
+<!-- 1. HERO -->
+<header class="hero" id="topo">
+  <div class="container">
+    <div class="hero-logo">[NOME DA DRA A DEFINIR]</div>
+    <div class="authority-line">[CREDENCIAL/CRN A DEFINIR] · Especialista em emagrecimento feminino</div>
+    <h1>21 Dias para Emagrecer <strong>Sem Fome e Sem Inchaço</strong> — mesmo depois dos 35</h1>
+    <p class="sub">Plano de alta proteína feito para o seu corpo de hoje. Controle a fome, reduza o inchaço e volte a emagrecer sem academia, sem contar calorias e sem dieta complicada.</p>
+    <div class="creative-slot">
+      <strong>[CRIATIVO: foto real da Dra/Nutri]</strong>
+      <span>Inserir retrato real, credencial ou imagem de autoridade. Não usar foto genérica.</span>
+    </div>
+    <a href="#oferta" class="cta-btn">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</a>
+    <p class="micro">Acesso imediato. Cobrança única. Garantia de 30 dias.</p>
+  </div>
+</header>
+
+<!-- 2. BARRA PROVA SOCIAL -->
+<div class="social-bar">
+  <span class="stars">★★★★★</span><span>+1.187 mulheres já fizeram o desafio</span>
+</div>
+
+<!-- 3. DOR -->
+<section class="dor alt">
+  <div class="container">
+    <h2>Você já tentou de tudo, mas o corpo <strong>não responde mais</strong>?</h2>
+    <p>Você começa toda segunda cheia de força de vontade... e na quarta já está com fome, cansada e pensando: "amanhã eu recomeço".</p>
+    <p>Já cortou pão, arroz, doce, fez caminhada, jejum, app de caloria... e mesmo assim o inchaço não sai, a roupa aperta e a balança parece travada.</p>
+    <p>O problema não é falta de esforço. Depois dos 35, muitas mulheres precisam de um plano mais simples, com refeições que sustentam, reduzem beliscos e não dependem de academia para começar.</p>
+    <div class="callout">
+      <p>Você não é preguiçosa. Você só pode estar usando o plano errado para o corpo que você tem hoje.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CRIATIVO 2: PROVA VISUAL DE REFEIÇÕES -->
+<section>
+  <div class="container">
+    <div class="creative-slot">
+      <strong>[CRIATIVO: refeições simples de alta proteína]</strong>
+      <span>Inserir fotos reais ou mockups de pratos do plano. Melhor ponto: logo depois da dor, antes do mecanismo.</span>
+    </div>
+  </div>
+</section>
+
+<!-- 4. MECANISMO -->
+<section class="mecanismo alt">
+  <div class="container">
+    <h2>Como o <strong>Desafio 21 Dias Sem Fome</strong> funciona</h2>
+    <div class="creative-slot">
+      <strong>[CRIATIVO: mini diagrama do mecanismo]</strong>
+      <span>Fome + ultraprocessados + rotina confusa → plano simples + saciedade + consistência.</span>
+    </div>
+    <div class="step">
+      <div class="num">1</div>
+      <div>
+        <h3>Refeições que seguram a fome</h3>
+        <p>Você segue combinações simples de alta proteína para não depender de força de vontade o dia inteiro.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div>
+        <h3>Menos ultraprocessados e beliscos</h3>
+        <p>O plano reduz as escolhas que mais travam a rotina: doce, lanche fora de hora e comida improvisada.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div>
+        <h3>21 dias guiados pela plataforma</h3>
+        <p>Tudo fica organizado na área de membros, com plano, vídeos, bônus e instruções para começar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. BENEFÍCIOS -->
+<section>
+  <div class="container">
+    <h2>O que o plano ajuda você a <strong>organizar já na primeira semana</strong></h2>
+    <div class="benefits">
+      <div class="benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p>Controlar a fome sem viver de salada sem graça</p></div>
+      <div class="benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p>Reduzir inchaço com uma rotina alimentar mais limpa</p></div>
+      <div class="benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p>Ter refeições prontas para copiar sem se perder no mercado</p></div>
+      <div class="benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p>Começar em casa, sem academia e sem equipamentos</p></div>
+      <div class="benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p>Acessar tudo pela plataforma, sem grupos bagunçados</p></div>
+      <div class="benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><p>Saber o que comer no café, almoço e jantar</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. DEPOIMENTOS -->
+<section class="alt">
+  <div class="container">
+    <h2>Prova social <strong>real entra aqui</strong></h2>
+    <div class="creative-slot">
+      <strong>[CRIATIVO: prints reais ou vídeo-depoimentos autorizados]</strong>
+      <span>Substituir por WhatsApp, Instagram, Hotmart/Kiwify ou vídeos reais. Não inserir kg, cidade ou nome sem prova/autorização.</span>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-head">
+        <div class="avatar">?</div>
+        <div>
+          <div class="testimonial-name">[DEPOIMENTO REAL 1]</div>
+          <div class="testimonial-meta">[Nome, idade/cidade e resultado somente se autorizado]</div>
+        </div>
+      </div>
+      <div class="testimonial-stars">★★★★★</div>
+      <p>"[Inserir texto real do depoimento aqui. Evitar promessa de resultado garantido.]"</p>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-head">
+        <div class="avatar">?</div>
+        <div>
+          <div class="testimonial-name">[DEPOIMENTO REAL 2]</div>
+          <div class="testimonial-meta">[Mídia validada antes de publicar]</div>
+        </div>
+      </div>
+      <div class="testimonial-stars">★★★★★</div>
+      <p>"[Inserir segundo depoimento real aqui.]"</p>
+    </div>
+    <p class="micro center">Resultados variam de pessoa para pessoa. Usar apenas depoimentos reais e autorizados.</p>
+  </div>
+</section>
+
+<!-- 7. OFERTA -->
+<section id="oferta">
+  <div class="container">
+    <h2>Tudo o que você recebe <strong>hoje</strong></h2>
+    <div class="creative-slot">
+      <strong>[CRIATIVO: mockup da área de membros]</strong>
+      <span>Inserir print real da plataforma, PDF do plano e aulas gravadas.</span>
+    </div>
+    <div class="oferta-box">
+      <ul class="oferta-list">
+        <li>Plano alimentar completo de 21 dias em PDF</li>
+        <li>Acesso à plataforma exclusiva com todo o material organizado</li>
+        <li>Treinamento em vídeo com [NOME DA DRA A DEFINIR]</li>
+        <li>Treinamento em vídeo com psicóloga sobre fome e emoções</li>
+        <li>Lista de compras e orientações para começar sem travar</li>
+        <li>Suporte por e-mail em até 48h úteis</li>
+      </ul>
+      <div class="price-old">De R$97</div>
+      <div class="price-new"><span class="price-cents">R$</span>29</div>
+      <div class="price-meta">Pagamento único. Sem assinatura. Sem cobrança mensal.</div>
+      <div class="guarantee-inline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.5 3.5 10.5 8 12 4.5-1.5 8-6.5 8-12V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <span>Garantia incondicional de 30 dias</span>
+      </div>
+      <a href="#form" class="cta-btn">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</a>
+      <p class="micro">Acesso imediato. Cobrança única. Garantia de 30 dias.</p>
+      <div class="badges">
+        <div class="badge">✓ Pagamento seguro: Pix ou cartão [confirmar checkout]</div>
+        <div class="badge">✓ Acesso enviado por e-mail após a compra</div>
+        <div class="badge">✓ Sem assinatura mensal</div>
+        <div class="badge">✓ 30 dias de garantia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. BÔNUS -->
+<section class="alt">
+  <div class="container">
+    <h2><strong>Bônus exclusivos</strong> para quem entra hoje</h2>
+    <div class="creative-slot">
+      <strong>[CRIATIVO: capas dos bônus]</strong>
+      <span>Inserir capas simples dos 3 bônus quando estiverem prontas.</span>
+    </div>
+
+    <div class="bonus-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      <div>
+        <h3>Bônus 1 — Lista de Compras Anti-inflamatória</h3>
+        <p>Para resolver "o que eu compro agora?" e não perder tempo no mercado.</p>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      <div>
+        <h3>Bônus 2 — Treino Turbo em Casa</h3>
+        <p>Menos de 20 minutos por dia para começar sem academia.</p>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      <div>
+        <h3>Bônus 3 — Chá Asiático Anticelulite + Receitas</h3>
+        <p>Para reforçar o cuidado com inchaço, retenção e rotina.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. COUNTDOWN -->
+<section>
+  <div class="container">
+    <div class="countdown">
+      <div class="countdown-label">Condição liberada para esta sessão</div>
+      <div class="countdown-timer" id="countdown">15:00</div>
+      <div class="countdown-meta">Após o fim do timer, os bônus podem sair desta oferta.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. GARANTIA -->
+<section class="alt">
+  <div class="container">
+    <div class="garantia">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.5 3.5 10.5 8 12 4.5-1.5 8-6.5 8-12V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
+      <h3>Garantia incondicional de 30 dias</h3>
+      <p>Teste o desafio por 30 dias. Se sentir que não é para você, basta chamar nossa equipe e devolvemos 100% do seu dinheiro. Sem perguntas difíceis, sem enrolação.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11. FAQ -->
+<section>
+  <div class="container">
+    <h2>Perguntas <strong>frequentes</strong></h2>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">O que vou receber?<span class="icon">+</span></button>
+      <div class="faq-a"><p>Você recebe acesso à plataforma exclusiva com plano alimentar, vídeos, bônus e instruções para começar hoje. Trocar esta descrição se a entrega real for diferente.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Tenho que pagar todo mês?<span class="icon">+</span></button>
+      <div class="faq-a"><p>Não. O pagamento é único. Sem assinatura, sem cobrança mensal no cartão.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Em quanto tempo recebo o acesso?<span class="icon">+</span></button>
+      <div class="faq-a"><p>Após a confirmação do pagamento, o acesso chega por e-mail em poucos minutos. Se não encontrar, verifique spam ou fale com o suporte.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Preciso fazer academia?<span class="icon">+</span></button>
+      <div class="faq-a"><p>Não. O desafio foi pensado para começar em casa. O bônus de treino é opcional.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">E se eu não gostar?<span class="icon">+</span></button>
+      <div class="faq-a"><p>Você tem 30 dias de garantia para pedir reembolso. Sem perguntas, sem enrolação.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Tem contraindicações?<span class="icon">+</span></button>
+      <div class="faq-a"><p>O programa é educacional e não substitui acompanhamento médico individual. Gestantes, lactantes, pessoas com doença renal ou condição médica específica devem consultar um profissional antes de iniciar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. FORM + CTA FINAL -->
+<section id="form" class="alt">
+  <div class="container">
+    <h2>Comece <strong>agora mesmo</strong></h2>
+    <p class="center" style="margin-bottom:18px;color:#555;font-size:15px">Preencha seus dados para liberar o acesso ao checkout seguro:</p>
+    <form class="lead-form" id="leadForm" novalidate>
+      <label for="nome">Seu primeiro nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Ex: Maria" required autocomplete="given-name">
+      <div class="err" id="errNome">Digite seu nome para continuar.</div>
+
+      <label for="email">Seu melhor e-mail</label>
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email">
+      <div class="err" id="errEmail">Digite um e-mail válido.</div>
+
+      <button type="submit" class="cta-btn">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
+      <p class="micro center">Acesso imediato. Cobrança única. Garantia de 30 dias.<br>Esta oferta personalizada está disponível apenas uma vez por CPF.</p>
+    </form>
+  </div>
+</section>
+
+<!-- 13. FOOTER -->
+<footer>
+  <div class="container">
+    <p><strong>Desafio 21 Dias Sem Fome</strong> · Programa educacional</p>
+    <p style="margin-top:8px"><a href="#politica-privacidade">Política de Privacidade</a> · <a href="#termos">Termos de Uso</a> · <a href="#contato">Contato</a></p>
+    <p class="legal">Este programa é educacional e não substitui acompanhamento médico ou nutricional individual. Resultados variam de pessoa para pessoa. Gestantes, lactantes e pessoas com condições médicas específicas devem consultar profissional antes de iniciar.</p>
+    <p class="legal">[DADOS LEGAIS A DEFINIR] · [E-MAIL DE CONTATO A DEFINIR]</p>
+  </div>
+</footer>
+</div>
+
+<script>
+(function(){
+  // === QUIZ ===
+  var questions=[
+    {q:'Qual é seu principal objetivo hoje?',a:['Emagrecer','Desinchar','Controlar a fome','Ter mais disposição']},
+    {q:'O que mais atrapalha seu emagrecimento?',a:['Vontade de doce','Falta de tempo','Fome à noite','Começo e paro no meio']},
+    {q:'Sua idade:',a:['30-39','40-49','50-64','65+']},
+    {q:'Você quer depender de academia para começar?',a:['Não quero depender disso','Posso fazer pouco em casa','Já faço atividade física','Quero algo só com alimentação']},
+    {q:'Você prefere um plano:',a:['Simples e direto','Com vídeos explicando','Com lista de compras','Com suporte para dúvidas']}
+  ];
+  var step=0;
+  var answers=[];
+  var qEl=document.getElementById('quizQuestion');
+  var oEl=document.getElementById('quizOptions');
+  var pEl=document.getElementById('quizProgress');
+  var resultEl=document.getElementById('quizResult');
+  var stepsEl=document.getElementById('quizSteps');
+  var showBtn=document.getElementById('showSales');
+  var suppressQuizClickUntil=0;
+  function showSales(){
+    document.body.classList.add('show-sales');
+  }
+  function advanceQuiz(answerIndex){
+    var item=questions[step];
+    if(!item||answerIndex<0||answerIndex>=item.a.length)return;
+    answers.push({question:item.q,answer:item.a[answerIndex]});
+    step++;
+    if(step>=questions.length){
+      try{sessionStorage.setItem('ddc_quiz_answers',JSON.stringify(answers))}catch(e){}
+      stepsEl.style.display='none';
+      resultEl.classList.add('show');
+    }else{
+      renderQuestion();
+    }
+  }
+  function handleQuizSelection(target,eventType){
+    if(!target)return;
+    var answerIndex=parseInt(target.getAttribute('data-answer-index'),10);
+    if(isNaN(answerIndex))return;
+    if(eventType==='click'&&Date.now()<suppressQuizClickUntil)return;
+    if(eventType==='pointerup')suppressQuizClickUntil=Date.now()+400;
+    advanceQuiz(answerIndex);
+  }
+  function renderQuestion(){
+    if(!qEl||!oEl)return;
+    var item=questions[step];
+    qEl.textContent=item.q;
+    pEl.style.width=((step+1)/questions.length*100)+'%';
+    oEl.innerHTML='';
+    item.a.forEach(function(text,index){
+      var btn=document.createElement('button');
+      btn.type='button';
+      btn.className='quiz-option';
+      btn.textContent=text;
+      btn.setAttribute('data-answer-index',String(index));
+      oEl.appendChild(btn);
+    });
+  }
+  renderQuestion();
+  if(oEl){
+    oEl.addEventListener('pointerup',function(event){
+      var btn=event.target.closest('.quiz-option');
+      if(!btn)return;
+      event.preventDefault();
+      handleQuizSelection(btn,'pointerup');
+    });
+    oEl.addEventListener('click',function(event){
+      var btn=event.target.closest('.quiz-option');
+      if(!btn)return;
+      handleQuizSelection(btn,'click');
+    });
+  }
+  if(showBtn){
+    showBtn.addEventListener('click',function(){
+      showSales();
+      setTimeout(function(){document.getElementById('topo').scrollIntoView({behavior:'smooth'})},50);
+    });
+  }
+
+  // === COUNTDOWN ===
+  var KEY='ddc_offer_end';
+  var DURATION=15*60*1000;
+  var endAt=parseInt(sessionStorage.getItem(KEY),10);
+  if(!endAt||isNaN(endAt)||endAt<Date.now()){
+    endAt=Date.now()+DURATION;
+    sessionStorage.setItem(KEY,String(endAt));
+  }
+  var el=document.getElementById('countdown');
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    if(!el)return;
+    var diff=endAt-Date.now();
+    if(diff<=0){el.textContent='00:00';return}
+    var m=Math.floor(diff/60000);
+    var s=Math.floor((diff%60000)/1000);
+    el.textContent=pad(m)+':'+pad(s);
+  }
+  tick();
+  setInterval(tick,1000);
+
+  // === FAQ ACCORDION ===
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.parentElement;
+      var open=item.classList.contains('open');
+      item.classList.toggle('open');
+      btn.setAttribute('aria-expanded',String(!open));
+    });
+  });
+
+  // === FORM SUBMIT ===
+  var form=document.getElementById('leadForm');
+  var nome=document.getElementById('nome');
+  var email=document.getElementById('email');
+  var errN=document.getElementById('errNome');
+  var errE=document.getElementById('errEmail');
+  var emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function getUTMs(){
+    var p=new URLSearchParams(window.location.search);
+    var utms=[];
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){
+      var v=p.get(k);
+      if(v) utms.push(k+'='+encodeURIComponent(v));
+    });
+    return utms.join('&');
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true;
+    errN.classList.remove('show');
+    errE.classList.remove('show');
+    if(!nome.value.trim()){errN.classList.add('show');ok=false}
+    if(!emailRe.test(email.value.trim())){errE.classList.add('show');ok=false}
+    if(!ok)return;
+    var lead={nome:nome.value.trim(),email:email.value.trim().toLowerCase(),ts:new Date().toISOString()};
+    try{sessionStorage.setItem('ddc_lead',JSON.stringify(lead))}catch(e){}
+
+    // TODO: enviar para webhook/CRM antes de redirecionar
+    // Trigger pixel event quando pixel ativo: if(typeof fbq==='function'){fbq('track','Lead')}
+
+    var checkoutBase='https://pay.hotmart.com/CHECKOUT_ID_AQUI';
+    var utms=getUTMs();
+    var url=checkoutBase+'?name='+encodeURIComponent(lead.nome)+'&email='+encodeURIComponent(lead.email)+(utms?'&'+utms:'');
+    window.location.href=url;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Ignore workspace-only files and keep Pages root clean
+.git/
+.claude/
+test-results/
+projetos/
+AGENTS.md
+README.md
+*.backup-*.html
