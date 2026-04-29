@@ -62,6 +62,112 @@ fbq('track', 'PageView');
   body.show-sales .sales-page{display:block}
   body.show-sales .quiz-gate{display:none}
 
+  /* === QUIZ 16 — HEADER & STAGE === */
+  .quiz-gate{padding:0 0 30px}
+  .quiz-header{display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:10;padding:14px 16px 10px;background:#fff;border-bottom:1px solid #f1d5db}
+  .quiz-back{position:absolute;left:14px;top:50%;transform:translateY(-50%);background:transparent;border:none;font-size:24px;color:#171717;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .quiz-back:hover{background:#fff1f2}
+  .quiz-back.hidden{visibility:hidden}
+  .quiz-doctor{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .quiz-avatar{width:54px;height:54px;border-radius:50%;background:#fff1f2;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.1);background-image:url('https://placehold.co/108x108/c8102e/ffffff/?text=DRA');background-size:cover;background-position:center}
+  .quiz-handle{font-size:13px;font-weight:700;color:#171717;display:flex;align-items:center;gap:4px}
+  .quiz-handle .verified{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;background:#3b82f6;color:#fff;border-radius:50%;font-size:9px;font-weight:800}
+  .quiz-progress-wrap{padding:0 16px;background:#fff;position:sticky;top:78px;z-index:9}
+  .quiz-progress{height:6px;background:#f3f4f6;border-radius:999px;overflow:hidden;margin:8px 0 22px}
+  .quiz-progress span{display:block;height:100%;width:6%;background:linear-gradient(90deg,#c8102e,#ff3158);border-radius:999px;transition:width .35s cubic-bezier(.4,0,.2,1)}
+  .quiz-stage{padding:6px 0 30px;animation:fadeStep .28s ease}
+  @keyframes fadeStep{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  /* INTRO */
+  .qs-intro{text-align:center;padding:24px 6px}
+  .qs-intro h1{font-size:25px;font-weight:800;line-height:1.25;margin-bottom:14px;color:#171717}
+  .qs-intro h1 strong{color:#e11d48}
+  .qs-intro .sub{font-size:15px;color:#4b5563;margin-bottom:24px;line-height:1.55}
+  .qs-intro .micro-bottom{font-size:13px;color:#6b7280;margin-top:14px}
+  .qs-kicker{font-size:12px;font-weight:800;color:#e11d48;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+
+  /* QUESTION */
+  .qs-q{font-size:19px;font-weight:800;line-height:1.3;text-align:center;margin:14px 0 18px;color:#171717}
+  .qs-options{display:grid;gap:10px;margin-bottom:6px}
+  .qs-option{width:100%;text-align:left;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:15px 16px;font-size:15px;font-weight:600;color:#222;transition:border .15s,background .15s,transform .1s;cursor:pointer}
+  .qs-option:hover,.qs-option:focus{border-color:#e11d48;background:#fff1f2;outline:none}
+  .qs-option:active{transform:scale(.98)}
+  .qs-microcopy{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:14px;margin-top:18px;font-size:13px;line-height:1.55;color:#7c2d12}
+  .qs-microcopy strong{color:#92400e;margin-right:4px}
+
+  /* CREATIVE / PAIN / MECHANISM blocks */
+  .qs-block{padding:6px 0}
+  .qs-block-h2{font-size:21px;font-weight:800;line-height:1.3;margin:14px 0 14px;color:#171717;text-align:center}
+  .qs-block-h2 strong{color:#e11d48}
+  .qs-creative-img{width:100%;border-radius:14px;margin:14px 0;overflow:hidden;border:2px dashed #f43f5e;background:#fff7f8}
+  .qs-creative-img img{width:100%;display:block}
+  .qs-creative-tag{font-size:10px;text-align:center;color:#9f1239;text-transform:uppercase;letter-spacing:.5px;font-weight:700;padding:6px 8px;background:#fff1f2}
+  .qs-quote{font-size:15px;font-style:italic;color:#444;text-align:left;border-left:3px solid #e11d48;padding:8px 14px;margin:14px 4px}
+  .qs-pain p{font-size:15px;line-height:1.6;margin-bottom:12px;color:#333}
+  .qs-pain strong{color:#9f1239}
+
+  /* MECHANISM phases */
+  .qs-phases{display:grid;gap:10px;margin:14px 0}
+  .qs-phase{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px}
+  .qs-phase-icon{font-size:22px;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:#fff1f2;border-radius:10px}
+  .qs-phase-title{font-size:14px;font-weight:800;color:#171717;margin-bottom:3px}
+  .qs-phase-text{font-size:13px;color:#555;line-height:1.5;margin:0}
+
+  .qs-cta{display:block;width:100%;background:#16a34a;color:#fff;font-size:16px;font-weight:800;padding:18px;border-radius:10px;text-align:center;text-transform:uppercase;letter-spacing:.2px;box-shadow:0 4px 12px rgba(22,163,74,.25);transition:transform .15s,box-shadow .15s;border:none;margin-top:18px;cursor:pointer}
+  .qs-cta:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(22,163,74,.35)}
+  .qs-cta:active{transform:translateY(0)}
+
+  /* LOAD SCREEN */
+  .qs-load{text-align:center;padding:18px 0}
+  .qs-load h2{font-size:21px;font-weight:800;margin-bottom:18px;color:#171717}
+  .qs-load-bar{height:10px;background:#f3f4f6;border-radius:999px;overflow:hidden;margin:8px 0 14px}
+  .qs-load-bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#c8102e,#ff3158);border-radius:999px;transition:width .35s ease}
+  .qs-load-pct{font-size:14px;font-weight:700;color:#e11d48;margin-bottom:18px}
+  .qs-load-list{list-style:none;text-align:left;display:grid;gap:10px;margin:18px 0;padding:0}
+  .qs-load-list li{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:#f9fafb;border-radius:10px;font-size:14px;color:#4b5563;transition:all .35s;line-height:1.4}
+  .qs-load-list li.done{background:#f0fdf4;color:#15803d;font-weight:600}
+  .qs-load-list li.active{background:#fff1f2;color:#9f1239;font-weight:600}
+  .qs-load-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;background:#e5e7eb;color:#6b7280}
+  .qs-load-list li.active .qs-load-icon{background:#e11d48;color:#fff;animation:spin 1s linear infinite}
+  .qs-load-list li.done .qs-load-icon{background:#16a34a;color:#fff;animation:none}
+  @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+  .qs-load-carousel{margin-top:22px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+  .qs-load-carousel::-webkit-scrollbar{display:none}
+  .qs-load-card{flex:0 0 78%;scroll-snap-align:center;border-radius:12px;overflow:hidden;border:2px dashed #f43f5e;background:#fff7f8}
+  .qs-load-card img{width:100%;height:160px;object-fit:cover;display:block}
+  .qs-load-card-cap{padding:8px;font-size:11px;color:#9f1239;text-align:center;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+  .qs-load-foot{font-size:13px;color:#6b7280;margin-top:14px}
+
+  /* RESULT SCREEN */
+  .qs-result{padding:6px 0}
+  .qs-result h2{font-size:14px;color:#6b7280;font-weight:600;text-align:center;margin-bottom:10px}
+  .qs-result-name{color:#171717;font-weight:800}
+  .qs-badge{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#e11d48,#9f1239);color:#fff;font-size:18px;font-weight:800;letter-spacing:1px;padding:14px 18px;border-radius:12px;margin:14px 0;box-shadow:0 8px 24px rgba(225,29,72,.4);animation:badgePulse 1.6s ease-in-out infinite;text-align:center}
+  @keyframes badgePulse{0%,100%{transform:scale(1);box-shadow:0 8px 24px rgba(225,29,72,.4)}50%{transform:scale(1.025);box-shadow:0 12px 32px rgba(225,29,72,.55)}}
+  .qs-result-intro{display:flex;gap:10px;align-items:center;background:#fff1f2;border-radius:10px;padding:12px 14px;margin:14px 0;font-size:14px;color:#7f1d1d;line-height:1.45}
+  .qs-result-intro .arrow{flex-shrink:0;font-size:18px}
+  .qs-imc{background:linear-gradient(90deg,#dc2626,#e11d48,#fb7185);border-radius:14px;padding:18px 14px 22px;color:#fff;margin:14px 0;position:relative}
+  .qs-imc-head{display:flex;justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:30px}
+  .qs-imc-track{position:relative;height:8px;background:rgba(255,255,255,.25);border-radius:999px;margin-bottom:8px}
+  .qs-imc-pin{position:absolute;left:18%;top:50%;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid #9f1239;box-shadow:0 3px 8px rgba(0,0,0,.3)}
+  .qs-imc-pin-label{position:absolute;left:18%;top:-26px;transform:translateX(-50%);background:#fff;color:#9f1239;font-size:10px;font-weight:800;padding:4px 10px;border-radius:5px;white-space:nowrap;text-transform:uppercase;letter-spacing:.5px}
+  .qs-imc-pin-label::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#fff}
+  .qs-imc-foot{display:flex;justify-content:space-between;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;opacity:.95;margin-top:10px}
+  .qs-imc-foot span:nth-child(2){flex:1;text-align:center}
+  .qs-alert{display:flex;gap:10px;align-items:flex-start;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:14px;margin:14px 0}
+  .qs-alert-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:2px solid #e11d48;display:flex;align-items:center;justify-content:center;color:#e11d48;font-weight:800;font-size:14px}
+  .qs-alert h4{font-size:14px;color:#9f1239;margin-bottom:6px;font-weight:800}
+  .qs-alert p{font-size:13px;color:#7f1d1d;line-height:1.55;margin:0}
+  .qs-analysis-title{font-size:17px;font-weight:800;text-align:center;margin:22px 0 12px;color:#171717}
+  .qs-analysis{display:grid;gap:8px;margin:14px 0}
+  .qs-analysis-card{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px}
+  .qs-analysis-label{font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+  .qs-analysis-value{font-size:14px;font-weight:700;color:#171717;display:flex;gap:6px;align-items:center}
+  .qs-analysis-value .ic{color:#e11d48;font-size:14px}
+  .qs-result-close{font-size:14px;text-align:center;color:#4b5563;margin:18px 6px 14px;line-height:1.5}
+  .qs-result-close strong{color:#e11d48}
+  .qs-disclaimer{font-size:11px;text-align:center;color:#9ca3af;margin-top:14px;line-height:1.5}
+
   /* === HERO === */
   .hero{background:linear-gradient(180deg,#fff1f2 0%,#fff 100%);padding:32px 0 40px;text-align:center}
   .hero-logo{font-size:13px;font-weight:800;color:#e11d48;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
@@ -159,35 +265,20 @@ fbq('track', 'PageView');
 </head>
 <body>
 
-<!-- 0. QUIZ DE ENTRADA -->
+<!-- 0. QUIZ DE ENTRADA — 16 SESSÕES + LOAD + RESULT -->
 <section class="quiz-gate" id="quizGate">
-  <div class="container">
-    <div class="quiz-card">
-      <div class="quiz-kicker">Teste rápido gratuito</div>
-      <h1>Descubra por que seu corpo <strong>não responde mais</strong></h1>
-      <p class="sub">Responda 5 perguntas e veja se o plano de 21 dias faz sentido para o seu momento.</p>
-
-      <div id="quizSteps">
-        <div class="quiz-progress"><span id="quizProgress"></span></div>
-        <div class="quiz-question" id="quizQuestion">Qual é seu principal objetivo hoje?</div>
-        <div class="quiz-options" id="quizOptions">
-          <button type="button" class="quiz-option">Emagrecer</button>
-          <button type="button" class="quiz-option">Desinchar</button>
-          <button type="button" class="quiz-option">Controlar a fome</button>
-          <button type="button" class="quiz-option">Ter mais disposição</button>
-        </div>
-      </div>
-
-      <div class="quiz-result" id="quizResult">
-        <div class="quiz-result-box">
-          <p><strong>Resultado:</strong> pelo que você respondeu, o melhor caminho é um plano simples de alta proteína, com foco em saciedade, menos inchaço e rotina fácil de seguir.</p>
-        </div>
-        <a href="#topo" class="cta-btn" id="showSales">VER MEU PLANO DE 21 DIAS — R$29</a>
-        <p class="quiz-note">Não é diagnóstico médico. Resultados variam de pessoa para pessoa.</p>
-      </div>
-
-      <p class="quiz-note">Dados usados apenas para personalizar sua experiência nesta página.</p>
+  <header class="quiz-header">
+    <button type="button" class="quiz-back hidden" id="quizBack" aria-label="Voltar">←</button>
+    <div class="quiz-doctor">
+      <div class="quiz-avatar" role="img" aria-label="[CRIATIVO: foto real da Dra]"></div>
+      <div class="quiz-handle">@nutri.dra <span class="verified" aria-hidden="true">✓</span></div>
     </div>
+  </header>
+  <div class="quiz-progress-wrap">
+    <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="6"><span id="quizProgress"></span></div>
+  </div>
+  <div class="container">
+    <div class="quiz-stage" id="quizStage"></div>
   </div>
 </section>
 
@@ -473,82 +564,238 @@ fbq('track', 'PageView');
 
 <script>
 (function(){
-  // === QUIZ ===
-  var questions=[
-    {q:'Qual é seu principal objetivo hoje?',a:['Emagrecer','Desinchar','Controlar a fome','Ter mais disposição']},
-    {q:'O que mais atrapalha seu emagrecimento?',a:['Vontade de doce','Falta de tempo','Fome à noite','Começo e paro no meio']},
-    {q:'Sua idade:',a:['30-39','40-49','50-64','65+']},
-    {q:'Você quer depender de academia para começar?',a:['Não quero depender disso','Posso fazer pouco em casa','Já faço atividade física','Quero algo só com alimentação']},
-    {q:'Você prefere um plano:',a:['Simples e direto','Com vídeos explicando','Com lista de compras','Com suporte para dúvidas']}
+  // === QUIZ 16 SESSÕES ===
+  var steps=[
+    {type:'intro',kicker:'Análise gratuita em 2 minutos',h1:'Descubra o plano de 21 dias certo para o <strong>seu corpo</strong>',sub:'16 perguntas rápidas. No final, você vê uma análise personalizada do seu nível atual + o caminho mais curto para destravar seu emagrecimento.',cta:'Começar análise →',micro:'Mais de 1.187 mulheres já fizeram esse mesmo diagnóstico.'},
+    {type:'question',id:'idade',q:'Qual sua faixa de idade?',a:['18 a 29 anos','30 a 39 anos','40 a 49 anos','50 anos ou mais'],micro:'A idade muda como o corpo armazena gordura. Mulheres acima de 35 têm o metabolismo até 30% mais lento — por isso o plano precisa ser diferente.'},
+    {type:'question',id:'objetivo',q:'Qual é seu objetivo principal hoje?',a:['Emagrecer','Desinchar e secar','Controlar a fome e o doce','Voltar a ter energia'],micro:'Cada objetivo exige um foco diferente no plano. Vamos calibrar isso pra você.'},
+    {type:'question',id:'tempo',q:'Há quanto tempo você está fora do seu peso ideal?',a:['Menos de 6 meses','1 a 2 anos','3 a 5 anos','Mais de 5 anos'],micro:'Quanto mais tempo nesse ciclo, mais inflamação acumulada. Não é frescura — é metabolismo.'},
+    {type:'question',id:'dificuldade',q:'O quão difícil tem sido perder peso hoje?',a:['Muito difícil — nada funciona','Difícil — perco e volta tudo','Moderado — começo e paro','Estou começando agora'],micro:'Não é falta de força de vontade. É bloqueio metabólico — e tem como reverter.'},
+    {type:'creative',h2:'Olha o que aconteceu com a <strong>[NOME — DEPOIMENTO REAL]</strong>',creative:'CRIATIVO 1: print real ou vídeo curto antes/depois com autorização',img:'https://placehold.co/600x720/c8102e/ffffff/?text=DEPOIMENTO+REAL',quote:'"Em 21 dias eu desinchei e voltei a caber na calça que estava guardada faz 3 anos." — [substituir por depoimento autorizado]',cta:'Continuar →',micro:'Você está a poucos passos de ver seu próprio resultado.'},
+    {type:'question',id:'fome',q:'Como é sua relação com a fome no dia a dia?',a:['Ataco doce à noite','Tenho fome o tempo todo','Como pouco mas não emagreço','Já está sob controle'],micro:'Fome compulsiva quase nunca é fome real — é desregulação de saciedade.'},
+    {type:'question',id:'calorias',q:'Você se preocupa em contar calorias?',a:['Sim, conto tudo','Já tentei e desisti','Não sei nem por onde começar','Não me importo'],micro:'Boa notícia: o plano não exige contagem de caloria. A saciedade vem da composição da comida.'},
+    {type:'pain',h2:'Por que algumas mulheres parecem secar do nada — enquanto você sofre por <strong>cada quilinho</strong>?',body:'Não é falta de esforço. O motivo real de você não estar conseguindo emagrecer é que seu corpo está <strong>preso em um estado inflamatório</strong> causado por excesso de carboidrato refinado, ultraprocessado e toxinas que travam a queima natural de gordura.',body2:'Quando esse ciclo é quebrado, o corpo volta a queimar gordura como combustível, a fome regulariza e o inchaço some.',creative:'CRIATIVO 2: comparativo "corpo inflamado vs desinflamado"',img:'https://placehold.co/600x320/fee2e2/9f1239/?text=ANTES+%2F+DEPOIS+CORPO',cta:'Quero entender como destravar →',micro:'Faltam 8 perguntas. Sua análise está sendo construída.'},
+    {type:'question',id:'conhece',q:'Você já conhece os benefícios da alimentação rica em proteína e gordura boa?',a:['Conheço bem','Já ouvi falar','Pouco','Não conheço'],micro:'Independente do nível, vamos te entregar um plano completo. Você não precisa virar nutricionista.'},
+    {type:'mechanism',h2:'Como funciona o método em <strong>21 dias</strong>',phases:[{icon:'🔥',title:'Dias 1–7 · Desinchar',text:'Corta gatilhos inflamatórios, regula intestino e reduz retenção.'},{icon:'⚡',title:'Dias 8–14 · Acelerar',text:'Ativa queima de gordura como fonte de energia.'},{icon:'💪',title:'Dias 15–21 · Consolidar',text:'Saciedade alta, fome controlada, peso em queda sustentada.'}],creative:'CRIATIVO 3: mini diagrama das 3 fases',img:'https://placehold.co/600x280/fef2f2/9f1239/?text=DIAGRAMA+3+FASES',body:'Esse cardápio trata diretamente a inflamação no seu corpo e cria estímulos naturais para o metabolismo voltar a queimar gordura — sem dieta restritiva, sem academia obrigatória.',cta:'Continuar →'},
+    {type:'question',id:'cafe',q:'Que horas você costuma tomar café da manhã?',a:['5h às 7h','7h às 9h','Depois das 9h','Pulo o café'],micro:'Seu plano vai respeitar o seu horário real. Nada de cardápio que não cabe na sua rotina.'},
+    {type:'question',id:'almoco',q:'E o almoço, em qual horário?',a:['Antes do meio-dia','12h às 13h','13h às 15h','Não tenho horário fixo'],micro:'Vamos sincronizar suas refeições com a sua janela de fome real.'},
+    {type:'question',id:'pico',q:'Em qual horário do dia você sente mais fome?',a:['Manhã','Tarde','Noite','Madrugada'],micro:'Esse é o horário que precisamos blindar primeiro. É onde a maioria desiste.'},
+    {type:'question',id:'caseira',q:'Quantos dias por semana você consegue fazer comida em casa?',a:['0 a 1 dia','2 a 3 dias','4 a 5 dias','Quase todo dia'],micro:'Uma vida corrida precisa de uma dieta realista. O plano se adapta a quem cozinha pouco também.'},
+    {type:'question',id:'atividade',q:'Quanto consegue fazer de atividade física hoje?',a:['Nada','Pouco em casa','2 a 3 vezes na semana','Já faço academia'],micro:'Última pergunta. Sua análise está pronta para ser gerada.'},
+    {type:'load'},
+    {type:'result'}
   ];
-  var step=0;
-  var answers=[];
-  var qEl=document.getElementById('quizQuestion');
-  var oEl=document.getElementById('quizOptions');
-  var pEl=document.getElementById('quizProgress');
-  var resultEl=document.getElementById('quizResult');
-  var stepsEl=document.getElementById('quizSteps');
-  var showBtn=document.getElementById('showSales');
-  var suppressQuizClickUntil=0;
-  function showSales(){
-    document.body.classList.add('show-sales');
+  var INTERACTIVE=16;
+  var stage=document.getElementById('quizStage');
+  var prog=document.getElementById('quizProgress');
+  var progWrap=prog?prog.parentElement:null;
+  var backBtn=document.getElementById('quizBack');
+  var state={step:0,answers:{}};
+  try{
+    var saved=sessionStorage.getItem('ddc_quiz_state');
+    if(saved){
+      var p=JSON.parse(saved);
+      if(p&&typeof p.step==='number'&&p.step<INTERACTIVE&&p.answers){state=p;}
+    }
+  }catch(e){}
+  function persist(){try{sessionStorage.setItem('ddc_quiz_state',JSON.stringify(state))}catch(e){}}
+  function setProgress(i){
+    var pct=i<INTERACTIVE?Math.round((i+1)/INTERACTIVE*100):100;
+    prog.style.width=pct+'%';
+    if(progWrap)progWrap.setAttribute('aria-valuenow',String(pct));
   }
-  function advanceQuiz(answerIndex){
-    var item=questions[step];
-    if(!item||answerIndex<0||answerIndex>=item.a.length)return;
-    answers.push({question:item.q,answer:item.a[answerIndex]});
-    step++;
-    if(step>=questions.length){
-      try{sessionStorage.setItem('ddc_quiz_answers',JSON.stringify(answers))}catch(e){}
-      stepsEl.style.display='none';
-      resultEl.classList.add('show');
-    }else{
-      renderQuestion();
+  function setBack(visible){
+    if(!backBtn)return;
+    backBtn.classList.toggle('hidden',!visible);
+  }
+  function go(i){state.step=i;persist();render();window.scrollTo({top:0,behavior:'smooth'});}
+  function next(){go(state.step+1);}
+  function prev(){if(state.step>0)go(state.step-1);}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function render(){
+    var s=steps[state.step];
+    if(!s)return;
+    setProgress(state.step);
+    setBack(state.step>0&&s.type!=='result'&&s.type!=='load');
+    stage.style.animation='none';void stage.offsetWidth;stage.style.animation='';
+    switch(s.type){
+      case 'intro':return renderIntro(s);
+      case 'question':return renderQuestion(s);
+      case 'creative':return renderCreative(s);
+      case 'pain':return renderPain(s);
+      case 'mechanism':return renderMechanism(s);
+      case 'load':return renderLoad();
+      case 'result':return renderResult();
     }
   }
-  function handleQuizSelection(target,eventType){
-    if(!target)return;
-    var answerIndex=parseInt(target.getAttribute('data-answer-index'),10);
-    if(isNaN(answerIndex))return;
-    if(eventType==='click'&&Date.now()<suppressQuizClickUntil)return;
-    if(eventType==='pointerup')suppressQuizClickUntil=Date.now()+400;
-    advanceQuiz(answerIndex);
+  function renderIntro(s){
+    stage.innerHTML='<div class="qs-intro">'+
+      (s.kicker?'<div class="qs-kicker">'+esc(s.kicker)+'</div>':'')+
+      '<h1>'+s.h1+'</h1>'+
+      '<p class="sub">'+esc(s.sub)+'</p>'+
+      '<button type="button" class="qs-cta" data-act="next">'+esc(s.cta)+'</button>'+
+      (s.micro?'<p class="micro-bottom">'+esc(s.micro)+'</p>':'')+
+    '</div>';
   }
-  function renderQuestion(){
-    if(!qEl||!oEl)return;
-    var item=questions[step];
-    qEl.textContent=item.q;
-    pEl.style.width=((step+1)/questions.length*100)+'%';
-    oEl.innerHTML='';
-    item.a.forEach(function(text,index){
-      var btn=document.createElement('button');
-      btn.type='button';
-      btn.className='quiz-option';
-      btn.textContent=text;
-      btn.setAttribute('data-answer-index',String(index));
-      oEl.appendChild(btn);
+  function renderQuestion(s){
+    var opts=s.a.map(function(t,i){return '<button type="button" class="qs-option" data-act="answer" data-i="'+i+'">'+esc(t)+'</button>';}).join('');
+    stage.innerHTML='<h2 class="qs-q">'+esc(s.q)+'</h2>'+
+      '<div class="qs-options">'+opts+'</div>'+
+      (s.micro?'<div class="qs-microcopy"><strong>👉</strong>'+esc(s.micro)+'</div>':'');
+  }
+  function renderCreative(s){
+    stage.innerHTML='<div class="qs-block">'+
+      '<h2 class="qs-block-h2">'+s.h2+'</h2>'+
+      '<div class="qs-creative-img"><img src="'+s.img+'" alt="depoimento"><div class="qs-creative-tag">['+esc(s.creative)+']</div></div>'+
+      (s.quote?'<p class="qs-quote">'+esc(s.quote)+'</p>':'')+
+      '<button type="button" class="qs-cta" data-act="next">'+esc(s.cta)+'</button>'+
+      (s.micro?'<div class="qs-microcopy"><strong>👉</strong>'+esc(s.micro)+'</div>':'')+
+    '</div>';
+  }
+  function renderPain(s){
+    stage.innerHTML='<div class="qs-block qs-pain">'+
+      '<h2 class="qs-block-h2">'+s.h2+'</h2>'+
+      '<p>'+s.body+'</p>'+
+      (s.body2?'<p>'+s.body2+'</p>':'')+
+      '<div class="qs-creative-img"><img src="'+s.img+'" alt="visual dor"><div class="qs-creative-tag">['+esc(s.creative)+']</div></div>'+
+      '<button type="button" class="qs-cta" data-act="next">'+esc(s.cta)+'</button>'+
+      (s.micro?'<div class="qs-microcopy"><strong>👉</strong>'+esc(s.micro)+'</div>':'')+
+    '</div>';
+  }
+  function renderMechanism(s){
+    var phases=s.phases.map(function(p){
+      return '<div class="qs-phase"><div class="qs-phase-icon">'+p.icon+'</div><div><div class="qs-phase-title">'+esc(p.title)+'</div><p class="qs-phase-text">'+esc(p.text)+'</p></div></div>';
+    }).join('');
+    stage.innerHTML='<div class="qs-block qs-pain">'+
+      '<h2 class="qs-block-h2">'+s.h2+'</h2>'+
+      '<div class="qs-phases">'+phases+'</div>'+
+      '<div class="qs-creative-img"><img src="'+s.img+'" alt="mecanismo"><div class="qs-creative-tag">['+esc(s.creative)+']</div></div>'+
+      '<p>'+s.body+'</p>'+
+      '<button type="button" class="qs-cta" data-act="next">'+esc(s.cta)+'</button>'+
+    '</div>';
+  }
+  function renderLoad(){
+    var stagesL=[
+      {ms:1700,label:'Calculando seu IMC e percentual de gordura estimado'},
+      {ms:2300,label:'Cruzando suas respostas com 1.187 mulheres da sua faixa de idade'},
+      {ms:1900,label:'Identificando bloqueios metabólicos no seu perfil'},
+      {ms:2400,label:'Selecionando o cardápio e a fase ideal para você começar'},
+      {ms:1500,label:'Gerando seu relatório personalizado'}
+    ];
+    var lis=stagesL.map(function(st,i){return '<li data-i="'+i+'"><span class="qs-load-icon">'+(i+1)+'</span><span>'+esc(st.label)+'…</span></li>';}).join('');
+    var carousel='';
+    for(var c=1;c<=4;c++){
+      carousel+='<div class="qs-load-card"><img src="https://placehold.co/420x300/c8102e/ffffff/?text=DEPOIMENTO+'+c+'" alt="depoimento"><div class="qs-load-card-cap">[CRIATIVO '+c+': depoimento real autorizado]</div></div>';
+    }
+    stage.innerHTML='<div class="qs-load">'+
+      '<h2>Processando suas informações…</h2>'+
+      '<div class="qs-load-bar"><span id="loadBar"></span></div>'+
+      '<div class="qs-load-pct" id="loadPct">0%</div>'+
+      '<ul class="qs-load-list" id="loadList">'+lis+'</ul>'+
+      '<div class="qs-load-carousel">'+carousel+'</div>'+
+      '<p class="qs-load-foot">Não feche esta página — sua análise está quase pronta.</p>'+
+    '</div>';
+    var bar=document.getElementById('loadBar');
+    var pctEl=document.getElementById('loadPct');
+    var list=document.getElementById('loadList');
+    var total=stagesL.reduce(function(a,b){return a+b.ms;},0);
+    var elapsed=0;
+    function runStage(i){
+      if(i>=stagesL.length){setTimeout(function(){go(state.step+1);},400);return;}
+      var li=list.querySelector('li[data-i="'+i+'"]');
+      if(li){li.classList.add('active');var ic=li.querySelector('.qs-load-icon');if(ic)ic.textContent='';}
+      var startElapsed=elapsed;
+      var stMs=stagesL[i].ms;
+      var t0=Date.now();
+      var animTick=setInterval(function(){
+        var dt=Date.now()-t0;
+        var cur=Math.min(dt,stMs);
+        var pp=Math.min(100,Math.round(((startElapsed+cur)/total)*100));
+        bar.style.width=pp+'%';
+        pctEl.textContent=pp+'%';
+      },80);
+      setTimeout(function(){
+        clearInterval(animTick);
+        elapsed+=stMs;
+        var pp=Math.min(100,Math.round((elapsed/total)*100));
+        bar.style.width=pp+'%';
+        pctEl.textContent=pp+'%';
+        if(li){li.classList.remove('active');li.classList.add('done');var ic=li.querySelector('.qs-load-icon');if(ic)ic.textContent='✓';}
+        runStage(i+1);
+      },stMs);
+    }
+    setTimeout(function(){runStage(0);},300);
+  }
+  function renderResult(){
+    var displayName='você';
+    var objetivoMap={
+      'Emagrecer':'Emagrecer',
+      'Desinchar e secar':'Desinchar e secar',
+      'Controlar a fome e o doce':'Controlar fome e compulsão',
+      'Voltar a ter energia':'Recuperar disposição'
+    };
+    var objetivo=objetivoMap[state.answers.objetivo]||'Emagrecer';
+    stage.innerHTML='<div class="qs-result">'+
+      '<h2>Resultado para <span class="qs-result-name">'+displayName+'</span></h2>'+
+      '<div class="qs-badge">‼️ NÍVEL ELEVADO ‼️</div>'+
+      '<div class="qs-result-intro"><span class="arrow">↓</span><span>Temos um resumo do seu bem-estar geral abaixo:</span></div>'+
+      '<div class="qs-imc">'+
+        '<div class="qs-imc-head"><span>Seu IMC</span><span>Elevado</span></div>'+
+        '<div class="qs-imc-track">'+
+          '<div class="qs-imc-pin-label">Você está aqui</div>'+
+          '<div class="qs-imc-pin"></div>'+
+        '</div>'+
+        '<div class="qs-imc-foot"><span>Alto</span><span>Médio</span><span>Seu objetivo</span></div>'+
+      '</div>'+
+      '<div class="qs-alert">'+
+        '<div class="qs-alert-icon">!</div>'+
+        '<div><h4>Nível Elevado</h4><p>Riscos de um IMC fora do saudável: pressão alta, doença cardíaca, diabetes tipo 2, dor nas costas, fadiga crônica, queda de imunidade. Reverter esse quadro nas próximas semanas é decisão urgente.</p></div>'+
+      '</div>'+
+      '<h3 class="qs-analysis-title">Análise do seu resultado</h3>'+
+      '<div class="qs-analysis">'+
+        '<div class="qs-analysis-card"><div class="qs-analysis-label">Estilo de vida</div><div class="qs-analysis-value"><span class="ic">⚑</span>Sedentário</div></div>'+
+        '<div class="qs-analysis-card"><div class="qs-analysis-label">Motivação para seguir o plano</div><div class="qs-analysis-value"><span class="ic">↗</span>Alta</div></div>'+
+        '<div class="qs-analysis-card"><div class="qs-analysis-label">Objetivo principal</div><div class="qs-analysis-value"><span class="ic">●</span>'+esc(objetivo)+'</div></div>'+
+        '<div class="qs-analysis-card"><div class="qs-analysis-label">Probabilidade de perder peso seguindo o plano</div><div class="qs-analysis-value"><span class="ic">👍</span>Alta</div></div>'+
+      '</div>'+
+      '<p class="qs-result-close">Com base nas suas respostas, você é <strong>forte candidata</strong> ao Desafio 21 Dias Sem Fome. Clique abaixo e veja como vai funcionar o seu plano:</p>'+
+      '<button type="button" class="qs-cta" data-act="goto-offer">Ver meu plano de 21 dias →</button>'+
+      '<p class="qs-disclaimer">Esta análise não substitui avaliação médica. Resultados variam de pessoa para pessoa.</p>'+
+    '</div>';
+    try{
+      var KEY='ddc_offer_end';
+      var endAt=parseInt(sessionStorage.getItem(KEY),10);
+      if(!endAt||isNaN(endAt)||endAt<Date.now()){
+        sessionStorage.setItem(KEY,String(Date.now()+15*60*1000));
+      }
+      sessionStorage.setItem('ddc_quiz_answers',JSON.stringify(state.answers));
+    }catch(e){}
+  }
+  if(stage){
+    stage.addEventListener('click',function(e){
+      var el=e.target.closest('[data-act]');
+      if(!el)return;
+      var act=el.getAttribute('data-act');
+      if(act==='next'){next();}
+      else if(act==='answer'){
+        var i=parseInt(el.getAttribute('data-i'),10);
+        var s=steps[state.step];
+        if(s&&s.type==='question'&&!isNaN(i)){
+          state.answers[s.id]=s.a[i];
+          next();
+        }
+      }
+      else if(act==='goto-offer'){
+        document.body.classList.add('show-sales');
+        setTimeout(function(){
+          var t=document.getElementById('oferta')||document.getElementById('topo');
+          if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+        },80);
+      }
     });
   }
-  renderQuestion();
-  if(oEl){
-    oEl.addEventListener('pointerup',function(event){
-      var btn=event.target.closest('.quiz-option');
-      if(!btn)return;
-      event.preventDefault();
-      handleQuizSelection(btn,'pointerup');
-    });
-    oEl.addEventListener('click',function(event){
-      var btn=event.target.closest('.quiz-option');
-      if(!btn)return;
-      handleQuizSelection(btn,'click');
-    });
-  }
-  if(showBtn){
-    showBtn.addEventListener('click',function(){
-      showSales();
-      setTimeout(function(){document.getElementById('topo').scrollIntoView({behavior:'smooth'})},50);
-    });
-  }
+  if(backBtn){backBtn.addEventListener('click',function(){prev();});}
+  render();
 
   // === COUNTDOWN ===
   var KEY='ddc_offer_end';
