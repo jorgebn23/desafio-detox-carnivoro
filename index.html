@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <meta name="robots" content="index, follow">
 <title>Desafio 21 Dias Sem Fome — Emagrecer Sem Fome e Sem Inchaço</title>
-<meta name="description" content="Plano de alta proteína para desinchar, controlar a fome e voltar a emagrecer sem academia e sem contar calorias. Acesso por R$29 com garantia de 30 dias.">
+<meta name="description" content="Plano de alta proteína para desinchar, controlar a fome e voltar a emagrecer sem academia e sem contar calorias. Acesso por R$29 com garantia de 7 dias.">
 <meta property="og:title" content="Desafio 21 Dias Sem Fome">
 <meta property="og:description" content="Plano de 21 dias para controlar a fome, desinchar e voltar a emagrecer com refeições simples.">
 <meta property="og:type" content="website">
@@ -63,16 +63,17 @@ fbq('track', 'PageView');
   body.show-sales .quiz-gate{display:none}
 
   /* === QUIZ 16 — HEADER & STAGE === */
-  .quiz-gate{padding:0 0 30px}
-  .quiz-header{display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:10;padding:14px 16px 10px;background:#fff;border-bottom:1px solid #f1d5db}
-  .quiz-back{position:absolute;left:14px;top:50%;transform:translateY(-50%);background:transparent;border:none;font-size:24px;color:#171717;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
-  .quiz-back:hover{background:#fff1f2}
+  .quiz-gate{padding:0 0 30px;display:block;min-height:100vh}
+  .quiz-header{display:flex;align-items:center;justify-content:flex-start;position:sticky;top:0;z-index:10;min-height:54px;padding:8px 16px;background:#fff;border-bottom:1px solid #f1d5db}
+  .quiz-back{background:#fff7f8;border:1px solid #f1d5db;font-size:24px;color:#9f1239;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(190,18,60,.12);transition:background .15s,border-color .15s,transform .15s,box-shadow .15s}
+  .quiz-back:hover,.quiz-back:focus{background:#fff1f2;border-color:#f43f5e;box-shadow:0 6px 16px rgba(190,18,60,.18);outline:none}
+  .quiz-back:active{transform:scale(.96)}
   .quiz-back.hidden{visibility:hidden}
   .quiz-doctor{display:flex;flex-direction:column;align-items:center;gap:4px}
-  .quiz-avatar{width:54px;height:54px;border-radius:50%;background:#fff1f2;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.1);background-image:url('https://placehold.co/108x108/c8102e/ffffff/?text=DRA');background-size:cover;background-position:center}
+  .quiz-avatar{width:54px;height:54px;border-radius:50%;background:#fff1f2;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.1);background-image:url('projetos/desafio-detox-carnivoro/fotos/doutora/foto da medica.png');background-size:cover;background-position:center}
   .quiz-handle{font-size:13px;font-weight:700;color:#171717;display:flex;align-items:center;gap:4px}
   .quiz-handle .verified{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;background:#3b82f6;color:#fff;border-radius:50%;font-size:9px;font-weight:800}
-  .quiz-progress-wrap{padding:0 16px;background:#fff;position:sticky;top:78px;z-index:9}
+  .quiz-progress-wrap{padding:0 16px;background:#fff;position:sticky;top:54px;z-index:9}
   .quiz-progress{height:6px;background:#f3f4f6;border-radius:999px;overflow:hidden;margin:8px 0 22px}
   .quiz-progress span{display:block;height:100%;width:6%;background:linear-gradient(90deg,#c8102e,#ff3158);border-radius:999px;transition:width .35s cubic-bezier(.4,0,.2,1)}
   .quiz-stage{padding:6px 0 30px;animation:fadeStep .28s ease}
@@ -87,12 +88,18 @@ fbq('track', 'PageView');
   .qs-kicker{font-size:12px;font-weight:800;color:#e11d48;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
 
   /* QUESTION */
-  .qs-q{font-size:19px;font-weight:800;line-height:1.3;text-align:center;margin:14px 0 18px;color:#171717}
-  .qs-options{display:grid;gap:10px;margin-bottom:6px}
+  .quiz-persona-inline{display:flex;flex-direction:column;align-items:center;gap:5px;margin:2px 0 14px}
+  .quiz-persona-inline .quiz-avatar{width:62px;height:62px;box-shadow:0 8px 18px rgba(190,18,60,.16)}
+  .quiz-persona-inline .quiz-handle{font-size:14px}
+  .qs-question-img{width:100%;border-radius:14px;margin:0 0 14px;overflow:hidden;border:2px dashed #f43f5e;background:#fff7f8}
+  .qs-question-img img{width:100%;height:auto;display:block}
+  .qs-question-tag{font-size:10px;text-align:center;color:#9f1239;text-transform:uppercase;letter-spacing:.5px;font-weight:700;padding:6px 8px;background:#fff1f2}
+  .qs-q{font-size:20px;font-weight:800;line-height:1.3;text-align:center;margin:12px 0 12px;color:#171717}
+  .qs-options{display:grid;gap:10px;margin-top:14px;margin-bottom:6px}
   .qs-option{width:100%;text-align:left;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:15px 16px;font-size:15px;font-weight:600;color:#222;transition:border .15s,background .15s,transform .1s;cursor:pointer}
   .qs-option:hover,.qs-option:focus{border-color:#e11d48;background:#fff1f2;outline:none}
   .qs-option:active{transform:scale(.98)}
-  .qs-microcopy{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:14px;margin-top:18px;font-size:13px;line-height:1.55;color:#7c2d12}
+  .qs-microcopy{background:#fffbeb;border:1px solid #fbbf24;border-radius:12px;padding:15px 16px;margin:12px 0 0;font-size:15px;line-height:1.55;color:#713f12}
   .qs-microcopy strong{color:#92400e;margin-right:4px}
 
   /* CREATIVE / PAIN / MECHANISM blocks */
@@ -131,10 +138,11 @@ fbq('track', 'PageView');
   .qs-load-list li.active .qs-load-icon{background:#e11d48;color:#fff;animation:spin 1s linear infinite}
   .qs-load-list li.done .qs-load-icon{background:#16a34a;color:#fff;animation:none}
   @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-  .qs-load-carousel{margin-top:22px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px}
-  .qs-load-carousel::-webkit-scrollbar{display:none}
-  .qs-load-card{flex:0 0 78%;scroll-snap-align:center;border-radius:12px;overflow:hidden;border:2px dashed #f43f5e;background:#fff7f8}
-  .qs-load-card img{width:100%;height:160px;object-fit:cover;display:block}
+  .qs-load-carousel-wrap{overflow:hidden;margin-top:22px;border-radius:12px}
+  .qs-load-carousel{display:flex;gap:12px;width:max-content;animation:marqueeScroll 18s linear infinite}
+  @keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  .qs-load-card{flex:0 0 200px;border-radius:12px;overflow:hidden;border:2px solid #f1d5db;background:#fff7f8}
+  .qs-load-card img{width:200px;height:160px;object-fit:cover;display:block}
   .qs-load-card-cap{padding:8px;font-size:11px;color:#9f1239;text-align:center;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
   .qs-load-foot{font-size:13px;color:#6b7280;margin-top:14px}
 
@@ -253,6 +261,19 @@ fbq('track', 'PageView');
   footer a{color:#fff;text-decoration:underline}
   .legal{font-size:11px;color:#888;margin-top:14px;line-height:1.5}
 
+  .hero-dra-img{width:100%;max-width:340px;border-radius:16px;margin:20px auto;display:block}
+  .section-img{width:100%;border-radius:14px;margin:16px 0;display:block}
+  .dep-prints{display:flex;flex-direction:column;gap:12px;margin:16px 0}
+  .dep-print{width:100%;border-radius:12px;display:block}
+  .avatar-img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0}
+  .garantia-selo{width:120px;display:block;margin:12px auto 0}
+  .metodo-simples{background:#fff}
+  .simples-grid{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+  .simples-item{display:flex;align-items:flex-start;gap:14px;background:#fff7f8;border-radius:12px;padding:14px 16px;border-left:4px solid #e11d48}
+  .simples-letter{font-size:30px;font-weight:900;color:#e11d48;line-height:1;min-width:30px;text-align:center;padding-top:2px}
+  .simples-item strong{font-size:15px;font-weight:700;color:#171717;display:block;margin-bottom:4px}
+  .simples-item p{font-size:14px;color:#4b5563;line-height:1.5;margin:0}
+
   @media (min-width:768px){
     .container{max-width:680px}
     .hero h1,.quiz-card h1{font-size:38px}
@@ -269,10 +290,6 @@ fbq('track', 'PageView');
 <section class="quiz-gate" id="quizGate">
   <header class="quiz-header">
     <button type="button" class="quiz-back hidden" id="quizBack" aria-label="Voltar">←</button>
-    <div class="quiz-doctor">
-      <div class="quiz-avatar" role="img" aria-label="[CRIATIVO: foto real da Dra]"></div>
-      <div class="quiz-handle">@nutri.dra <span class="verified" aria-hidden="true">✓</span></div>
-    </div>
   </header>
   <div class="quiz-progress-wrap">
     <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="6"><span id="quizProgress"></span></div>
@@ -287,16 +304,12 @@ fbq('track', 'PageView');
 <!-- 1. HERO -->
 <header class="hero" id="topo">
   <div class="container">
-    <div class="hero-logo">[NOME DA DRA A DEFINIR]</div>
-    <div class="authority-line">[CREDENCIAL/CRN A DEFINIR] · Especialista em emagrecimento feminino</div>
+    <div class="hero-logo">Dra. Helena Vasconcellos</div>
+    <div class="authority-line">Nutricionista · Especialista em Emagrecimento Inteligente e Comportamento Alimentar</div>
     <h1>21 Dias para Emagrecer <strong>Sem Fome e Sem Inchaço</strong> — mesmo depois dos 35</h1>
     <p class="sub">Plano de alta proteína feito para o seu corpo de hoje. Controle a fome, reduza o inchaço e volte a emagrecer sem academia, sem contar calorias e sem dieta complicada.</p>
-    <div class="creative-slot">
-      <strong>[CRIATIVO: foto real da Dra/Nutri]</strong>
-      <span>Inserir retrato real, credencial ou imagem de autoridade. Não usar foto genérica.</span>
-    </div>
-    <a href="#oferta" class="cta-btn">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</a>
-    <p class="micro">Acesso imediato. Cobrança única. Garantia de 30 dias.</p>
+    <button type="button" class="cta-btn" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth',block:'start'})">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
+    <p class="micro">Acesso imediato. Cobrança única. Garantia de 7 dias.</p>
   </div>
 </header>
 
@@ -321,21 +334,16 @@ fbq('track', 'PageView');
 <!-- CRIATIVO 2: PROVA VISUAL DE REFEIÇÕES -->
 <section>
   <div class="container">
-    <div class="creative-slot">
-      <strong>[CRIATIVO: refeições simples de alta proteína]</strong>
-      <span>Inserir fotos reais ou mockups de pratos do plano. Melhor ponto: logo depois da dor, antes do mecanismo.</span>
-    </div>
+    <img src="projetos/desafio-detox-carnivoro/fotos/quiz/refeicao alta proteina.jpg"
+         alt="Refeição simples de alta proteína — plano de 21 dias"
+         class="section-img" loading="lazy">
   </div>
 </section>
 
 <!-- 4. MECANISMO -->
 <section class="mecanismo alt">
   <div class="container">
-    <h2>Como o <strong>Desafio 21 Dias Sem Fome</strong> funciona</h2>
-    <div class="creative-slot">
-      <strong>[CRIATIVO: mini diagrama do mecanismo]</strong>
-      <span>Fome + ultraprocessados + rotina confusa → plano simples + saciedade + consistência.</span>
-    </div>
+    <h2>Como o <strong>Método S.I.M.P.L.E.S</strong> funciona em 21 dias</h2>
     <div class="step">
       <div class="num">1</div>
       <div>
@@ -375,17 +383,43 @@ fbq('track', 'PageView');
   </div>
 </section>
 
+<!-- 5.5 MÉTODO S.I.M.P.L.E.S -->
+<section class="metodo-simples">
+  <div class="container">
+    <p class="qs-kicker">O MÉTODO</p>
+    <h2>Por que o <strong>S.I.M.P.L.E.S</strong> funciona quando outros métodos falharam</h2>
+    <p>Desenvolvido pela Dra. Helena Vasconcellos com base em emagrecimento inteligente e comportamento alimentar — 7 princípios que o plano de 21 dias aplica na prática.</p>
+    <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/metodo simples.png"
+         alt="Método S.I.M.P.L.E.S — Instituto Helena Vasconcellos"
+         class="section-img" loading="lazy">
+    <div class="simples-grid">
+      <div class="simples-item"><span class="simples-letter">S</span><div><strong>Saciedade primeiro</strong><p>Comer para não sentir fome — não para reduzir caloria à força.</p></div></div>
+      <div class="simples-item"><span class="simples-letter">I</span><div><strong>Inteligência alimentar</strong><p>Escolhas que sustentam sem depender de força de vontade.</p></div></div>
+      <div class="simples-item"><span class="simples-letter">M</span><div><strong>Menos ultraprocessados</strong><p>Reduzir os alimentos que mantêm a fome acesa o dia todo.</p></div></div>
+      <div class="simples-item"><span class="simples-letter">P</span><div><strong>Padrão de rotina</strong><p>Um plano que cabe na vida real, não em uma dieta perfeita.</p></div></div>
+      <div class="simples-item"><span class="simples-letter">L</span><div><strong>Liberdade alimentar</strong><p>Sem proibições absolutas. Com estratégia e intenção.</p></div></div>
+      <div class="simples-item"><span class="simples-letter">E</span><div><strong>Estratégia prática</strong><p>Cada refeição pensada para o dia que você tem, não para um ideal.</p></div></div>
+      <div class="simples-item"><span class="simples-letter">S</span><div><strong>Sustentabilidade</strong><p>Um hábito que dura além dos 21 dias — sem efeito sanfona.</p></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- 6. DEPOIMENTOS -->
 <section class="alt">
   <div class="container">
-    <h2>Prova social <strong>real entra aqui</strong></h2>
-    <div class="creative-slot">
-      <strong>[CRIATIVO: prints reais ou vídeo-depoimentos autorizados]</strong>
-      <span>Substituir por WhatsApp, Instagram, Hotmart/Kiwify ou vídeos reais. Não inserir kg, cidade ou nome sem prova/autorização.</span>
+    <h2>Mulheres reais que já <strong>fizeram o desafio</strong></h2>
+    <div class="dep-prints">
+      <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/depoimento.jpg" alt="Depoimento real de participante" class="dep-print" loading="lazy">
+      <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/depoimento 2.jpg" alt="Depoimento real de participante" class="dep-print" loading="lazy">
+      <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/depoimento 3.jpg" alt="Depoimento real de participante" class="dep-print" loading="lazy">
+    </div>
+    <div class="dep-prints">
+      <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/antes e depois.jpg" alt="Transformação real — antes e depois" class="dep-print" loading="lazy">
+      <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/antes e depois 3.jpg" alt="Transformação real — antes e depois" class="dep-print" loading="lazy">
     </div>
     <div class="testimonial">
       <div class="testimonial-head">
-        <div class="avatar">?</div>
+        <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/foto da pessoa do depoimento 1.jpg" class="avatar-img" alt="Participante 1" loading="lazy">
         <div>
           <div class="testimonial-name">[DEPOIMENTO REAL 1]</div>
           <div class="testimonial-meta">[Nome, idade/cidade e resultado somente se autorizado]</div>
@@ -396,7 +430,7 @@ fbq('track', 'PageView');
     </div>
     <div class="testimonial">
       <div class="testimonial-head">
-        <div class="avatar">?</div>
+        <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/foto da pessoa do depoimento 2.jpg" class="avatar-img" alt="Participante 2" loading="lazy">
         <div>
           <div class="testimonial-name">[DEPOIMENTO REAL 2]</div>
           <div class="testimonial-meta">[Mídia validada antes de publicar]</div>
@@ -405,7 +439,7 @@ fbq('track', 'PageView');
       <div class="testimonial-stars">★★★★★</div>
       <p>"[Inserir segundo depoimento real aqui.]"</p>
     </div>
-    <p class="micro center">Resultados variam de pessoa para pessoa. Usar apenas depoimentos reais e autorizados.</p>
+    <p class="micro center">Resultados variam de pessoa para pessoa. Usando apenas depoimentos reais e autorizados.</p>
   </div>
 </section>
 
@@ -413,15 +447,14 @@ fbq('track', 'PageView');
 <section id="oferta">
   <div class="container">
     <h2>Tudo o que você recebe <strong>hoje</strong></h2>
-    <div class="creative-slot">
-      <strong>[CRIATIVO: mockup da área de membros]</strong>
-      <span>Inserir print real da plataforma, PDF do plano e aulas gravadas.</span>
-    </div>
+    <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/mockup da dieta.png"
+         alt="Plano completo de 21 dias — Método S.I.M.P.L.E.S"
+         class="section-img" loading="lazy">
     <div class="oferta-box">
       <ul class="oferta-list">
         <li>Plano alimentar completo de 21 dias em PDF</li>
         <li>Acesso à plataforma exclusiva com todo o material organizado</li>
-        <li>Treinamento em vídeo com [NOME DA DRA A DEFINIR]</li>
+        <li>Treinamento em vídeo com Dra. Helena Vasconcellos</li>
         <li>Treinamento em vídeo com psicóloga sobre fome e emoções</li>
         <li>Lista de compras e orientações para começar sem travar</li>
         <li>Suporte por e-mail em até 48h úteis</li>
@@ -431,15 +464,16 @@ fbq('track', 'PageView');
       <div class="price-meta">Pagamento único. Sem assinatura. Sem cobrança mensal.</div>
       <div class="guarantee-inline">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.5 3.5 10.5 8 12 4.5-1.5 8-6.5 8-12V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
-        <span>Garantia incondicional de 30 dias</span>
+        <span>Garantia incondicional de 7 dias</span>
       </div>
-      <a href="#form" class="cta-btn">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</a>
-      <p class="micro">Acesso imediato. Cobrança única. Garantia de 30 dias.</p>
+      <button type="button" class="cta-btn" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth',block:'start'})">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
+      <p class="micro">Acesso imediato. Cobrança única. Garantia de 7 dias.</p>
       <div class="badges">
         <div class="badge">✓ Pagamento seguro: Pix ou cartão [confirmar checkout]</div>
         <div class="badge">✓ Acesso enviado por e-mail após a compra</div>
         <div class="badge">✓ Sem assinatura mensal</div>
-        <div class="badge">✓ 30 dias de garantia</div>
+        <div class="badge">✓ 7 dias de garantia</div>
+        <div class="badge badge-img"><img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/selo site protegido.png" alt="Site protegido" height="32" loading="lazy" style="display:inline-block;vertical-align:middle"></div>
       </div>
     </div>
   </div>
@@ -494,8 +528,11 @@ fbq('track', 'PageView');
   <div class="container">
     <div class="garantia">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.5 3.5 10.5 8 12 4.5-1.5 8-6.5 8-12V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
-      <h3>Garantia incondicional de 30 dias</h3>
-      <p>Teste o desafio por 30 dias. Se sentir que não é para você, basta chamar nossa equipe e devolvemos 100% do seu dinheiro. Sem perguntas difíceis, sem enrolação.</p>
+      <h3>Garantia incondicional de 7 dias</h3>
+      <p>Teste o desafio por 7 dias. Se sentir que não é para você, basta chamar nossa equipe e devolvemos 100% do seu dinheiro. Sem perguntas difíceis, sem enrolação.</p>
+      <img src="projetos/desafio-detox-carnivoro/fotos/pagina de vendas/Selo_de_Garantia_de_7_Dias_PNG_Transparente_Sem_Fundo.png"
+           alt="Garantia de 7 dias — devolução total"
+           class="garantia-selo" loading="lazy">
     </div>
   </div>
 </section>
@@ -522,7 +559,7 @@ fbq('track', 'PageView');
     </div>
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false">E se eu não gostar?<span class="icon">+</span></button>
-      <div class="faq-a"><p>Você tem 30 dias de garantia para pedir reembolso. Sem perguntas, sem enrolação.</p></div>
+      <div class="faq-a"><p>Você tem 7 dias de garantia para pedir reembolso. Sem perguntas, sem enrolação.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false">Tem contraindicações?<span class="icon">+</span></button>
@@ -546,7 +583,7 @@ fbq('track', 'PageView');
       <div class="err" id="errEmail">Digite um e-mail válido.</div>
 
       <button type="submit" class="cta-btn">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
-      <p class="micro center">Acesso imediato. Cobrança única. Garantia de 30 dias.<br>Esta oferta personalizada está disponível apenas uma vez por CPF.</p>
+      <p class="micro center">Acesso imediato. Cobrança única. Garantia de 7 dias.<br>Esta oferta personalizada está disponível apenas uma vez por CPF.</p>
     </form>
   </div>
 </section>
@@ -567,21 +604,21 @@ fbq('track', 'PageView');
   // === QUIZ 16 SESSÕES ===
   var steps=[
     {type:'intro',kicker:'Análise gratuita em 2 minutos',h1:'Descubra o plano de 21 dias certo para o <strong>seu corpo</strong>',sub:'16 perguntas rápidas. No final, você vê uma análise personalizada do seu nível atual + o caminho mais curto para destravar seu emagrecimento.',cta:'Começar análise →',micro:'Mais de 1.187 mulheres já fizeram esse mesmo diagnóstico.'},
-    {type:'question',id:'idade',q:'Qual sua faixa de idade?',a:['18 a 29 anos','30 a 39 anos','40 a 49 anos','50 anos ou mais'],micro:'A idade muda como o corpo armazena gordura. Mulheres acima de 35 têm o metabolismo até 30% mais lento — por isso o plano precisa ser diferente.'},
-    {type:'question',id:'objetivo',q:'Qual é seu objetivo principal hoje?',a:['Emagrecer','Desinchar e secar','Controlar a fome e o doce','Voltar a ter energia'],micro:'Cada objetivo exige um foco diferente no plano. Vamos calibrar isso pra você.'},
-    {type:'question',id:'tempo',q:'Há quanto tempo você está fora do seu peso ideal?',a:['Menos de 6 meses','1 a 2 anos','3 a 5 anos','Mais de 5 anos'],micro:'Quanto mais tempo nesse ciclo, mais inflamação acumulada. Não é frescura — é metabolismo.'},
-    {type:'question',id:'dificuldade',q:'O quão difícil tem sido perder peso hoje?',a:['Muito difícil — nada funciona','Difícil — perco e volta tudo','Moderado — começo e paro','Estou começando agora'],micro:'Não é falta de força de vontade. É bloqueio metabólico — e tem como reverter.'},
-    {type:'creative',h2:'Olha o que aconteceu com a <strong>[NOME — DEPOIMENTO REAL]</strong>',creative:'CRIATIVO 1: print real ou vídeo curto antes/depois com autorização',img:'https://placehold.co/600x720/c8102e/ffffff/?text=DEPOIMENTO+REAL',quote:'"Em 21 dias eu desinchei e voltei a caber na calça que estava guardada faz 3 anos." — [substituir por depoimento autorizado]',cta:'Continuar →',micro:'Você está a poucos passos de ver seu próprio resultado.'},
-    {type:'question',id:'fome',q:'Como é sua relação com a fome no dia a dia?',a:['Ataco doce à noite','Tenho fome o tempo todo','Como pouco mas não emagreço','Já está sob controle'],micro:'Fome compulsiva quase nunca é fome real — é desregulação de saciedade.'},
-    {type:'question',id:'calorias',q:'Você se preocupa em contar calorias?',a:['Sim, conto tudo','Já tentei e desisti','Não sei nem por onde começar','Não me importo'],micro:'Boa notícia: o plano não exige contagem de caloria. A saciedade vem da composição da comida.'},
-    {type:'pain',h2:'Por que algumas mulheres parecem secar do nada — enquanto você sofre por <strong>cada quilinho</strong>?',body:'Não é falta de esforço. O motivo real de você não estar conseguindo emagrecer é que seu corpo está <strong>preso em um estado inflamatório</strong> causado por excesso de carboidrato refinado, ultraprocessado e toxinas que travam a queima natural de gordura.',body2:'Quando esse ciclo é quebrado, o corpo volta a queimar gordura como combustível, a fome regulariza e o inchaço some.',creative:'CRIATIVO 2: comparativo "corpo inflamado vs desinflamado"',img:'https://placehold.co/600x320/fee2e2/9f1239/?text=ANTES+%2F+DEPOIS+CORPO',cta:'Quero entender como destravar →',micro:'Faltam 8 perguntas. Sua análise está sendo construída.'},
-    {type:'question',id:'conhece',q:'Você já conhece os benefícios da alimentação rica em proteína e gordura boa?',a:['Conheço bem','Já ouvi falar','Pouco','Não conheço'],micro:'Independente do nível, vamos te entregar um plano completo. Você não precisa virar nutricionista.'},
-    {type:'mechanism',h2:'Como funciona o método em <strong>21 dias</strong>',phases:[{icon:'🔥',title:'Dias 1–7 · Desinchar',text:'Corta gatilhos inflamatórios, regula intestino e reduz retenção.'},{icon:'⚡',title:'Dias 8–14 · Acelerar',text:'Ativa queima de gordura como fonte de energia.'},{icon:'💪',title:'Dias 15–21 · Consolidar',text:'Saciedade alta, fome controlada, peso em queda sustentada.'}],creative:'CRIATIVO 3: mini diagrama das 3 fases',img:'https://placehold.co/600x280/fef2f2/9f1239/?text=DIAGRAMA+3+FASES',body:'Esse cardápio trata diretamente a inflamação no seu corpo e cria estímulos naturais para o metabolismo voltar a queimar gordura — sem dieta restritiva, sem academia obrigatória.',cta:'Continuar →'},
-    {type:'question',id:'cafe',q:'Que horas você costuma tomar café da manhã?',a:['5h às 7h','7h às 9h','Depois das 9h','Pulo o café'],micro:'Seu plano vai respeitar o seu horário real. Nada de cardápio que não cabe na sua rotina.'},
-    {type:'question',id:'almoco',q:'E o almoço, em qual horário?',a:['Antes do meio-dia','12h às 13h','13h às 15h','Não tenho horário fixo'],micro:'Vamos sincronizar suas refeições com a sua janela de fome real.'},
-    {type:'question',id:'pico',q:'Em qual horário do dia você sente mais fome?',a:['Manhã','Tarde','Noite','Madrugada'],micro:'Esse é o horário que precisamos blindar primeiro. É onde a maioria desiste.'},
-    {type:'question',id:'caseira',q:'Quantos dias por semana você consegue fazer comida em casa?',a:['0 a 1 dia','2 a 3 dias','4 a 5 dias','Quase todo dia'],micro:'Uma vida corrida precisa de uma dieta realista. O plano se adapta a quem cozinha pouco também.'},
-    {type:'question',id:'atividade',q:'Quanto consegue fazer de atividade física hoje?',a:['Nada','Pouco em casa','2 a 3 vezes na semana','Já faço academia'],micro:'Última pergunta. Sua análise está pronta para ser gerada.'},
+    {type:'question',id:'idade',q:'Qual sua faixa de idade?',img:'projetos/desafio-detox-carnivoro/fotos/quiz/1 pagina.png',imgAlt:'mulher adulta refletindo sobre emagrecimento depois dos 35',a:['18 a 29 anos','30 a 39 anos','40 a 49 anos','50 anos ou mais'],micro:'Depois de certa idade, o corpo muda. A dieta que funcionava antes pode parar de funcionar, e isso faz muita mulher achar que o problema é ela.'},
+    {type:'question',id:'objetivo',q:'Qual é seu objetivo principal hoje?',img:'projetos/desafio-detox-carnivoro/fotos/quiz/2 pagina.jpg',imgAlt:'mulher buscando desinchar e recuperar energia',a:['Emagrecer','Desinchar e secar','Controlar a fome e o doce','Voltar a ter energia'],micro:'Sua resposta mostra qual dor pesa mais hoje: roupa apertada, barriga inchada, fome fora de hora ou falta de energia para cuidar de você.'},
+    {type:'question',id:'tempo',q:'Há quanto tempo você está fora do seu peso ideal?',img:'projetos/desafio-detox-carnivoro/fotos/quiz/pagina 3.png',imgAlt:'calendario representando tentativas de emagrecimento ao longo do tempo',a:['Menos de 6 meses','1 a 2 anos','3 a 5 anos','Mais de 5 anos'],micro:'Quanto mais tempo tentando e parando, mais cansativo fica acreditar de novo. O plano precisa ser simples o bastante para caber na sua vida real.'},
+    {type:'question',id:'dificuldade',q:'O quão difícil tem sido perder peso hoje?',img:'projetos/desafio-detox-carnivoro/fotos/quiz/pag 4.png',imgAlt:'balanca travada depois de tentativas de dieta',a:['Muito difícil — nada funciona','Difícil — perco e volta tudo','Moderado — começo e paro','Estou começando agora'],micro:'Quando nada funciona, a maioria culpa força de vontade. Mas muitas vezes o plano só não sustenta a fome, a rotina e os momentos de ansiedade.'},
+    {type:'creative',h2:'Olha o que aconteceu com ela em <strong>21 dias</strong>',img:'projetos/desafio-detox-carnivoro/fotos/quiz/pagina 5.jpg',quote:'"Em 21 dias eu desinchei e voltei a caber na calça que estava guardada faz 3 anos." — [substituir por depoimento autorizado]',cta:'Continuar →',micro:'Você está a poucos passos de ver seu próprio resultado.'},
+    {type:'question',id:'fome',q:'Como é sua relação com a fome no dia a dia?',img:'projetos/desafio-detox-carnivoro/fotos/quiz/pagina 6.jpg',imgAlt:'vontade de doce e fome no fim do dia',a:['Ataco doce à noite','Tenho fome o tempo todo','Como pouco mas não emagreço','Já está sob controle'],micro:'A fome da noite e a vontade de doce costumam ser o ponto em que a dieta desanda. O plano precisa proteger exatamente esse momento.'},
+    {type:'question',id:'calorias',q:'Você se preocupa em contar calorias?',a:['Sim, conto tudo','Já tentei e desisti','Não sei nem por onde começar','Não me importo'],micro:'Contar calorias cansa e vira mais uma cobrança. Para muitas mulheres, o mais importante é montar refeições simples que sustentem de verdade.'},
+    {type:'pain',h2:'Por que algumas mulheres parecem secar do nada — enquanto você sofre por <strong>cada quilinho</strong>?',body:'Não é falta de esforço. O motivo real de você não estar conseguindo emagrecer é que seu corpo está <strong>preso em um estado inflamatório</strong> causado por excesso de carboidrato refinado, ultraprocessado e toxinas que travam a queima natural de gordura.',body2:'Quando esse ciclo é quebrado, o corpo volta a queimar gordura como combustível, a fome regulariza e o inchaço some.',img:'projetos/desafio-detox-carnivoro/fotos/quiz/antes e depois 1.jpg',cta:'Quero entender como destravar →',micro:'Faltam 8 perguntas. Sua análise está sendo construída.'},
+    {type:'question',id:'conhece',q:'Você já conhece os benefícios da alimentação rica em proteína e gordura boa?',a:['Conheço bem','Já ouvi falar','Pouco','Não conheço'],micro:'Você não precisa virar nutricionista para começar. Precisa de um caminho claro para comer melhor, sentir saciedade e parar de improvisar todo dia.'},
+    {type:'mechanism',h2:'O <strong>Método S.I.M.P.L.E.S</strong> em 21 dias',phases:[{icon:'🔥',title:'Dias 1–7 · Desinchar',text:'Corta gatilhos inflamatórios, regula intestino e reduz retenção.'},{icon:'⚡',title:'Dias 8–14 · Acelerar',text:'Ativa queima de gordura como fonte de energia.'},{icon:'💪',title:'Dias 15–21 · Consolidar',text:'Saciedade alta, fome controlada, peso em queda sustentada.'}],img:'projetos/desafio-detox-carnivoro/fotos/pagina de vendas/metodo simples.png',body:'Esse cardápio trata diretamente a inflamação no seu corpo e cria estímulos naturais para o metabolismo voltar a queimar gordura — sem dieta restritiva, sem academia obrigatória.',cta:'Continuar →'},
+    {type:'question',id:'cafe',q:'Que horas você costuma tomar café da manhã?',a:['5h às 7h','7h às 9h','Depois das 9h','Pulo o café'],micro:'Seu plano precisa respeitar o seu horário real. Cardápio bonito que não cabe na rotina vira abandono em poucos dias.'},
+    {type:'question',id:'almoco',q:'E o almoço, em qual horário?',a:['Antes do meio-dia','12h às 13h','13h às 15h','Não tenho horário fixo'],micro:'O almoço é onde muita mulher perde o controle do resto do dia. Uma refeição que sustenta pode diminuir beliscos e ansiedade depois.'},
+    {type:'question',id:'pico',q:'Em qual horário do dia você sente mais fome?',img:'projetos/desafio-detox-carnivoro/fotos/quiz/horario da fome.png',imgAlt:'relogio marcando o horario em que a fome aperta',a:['Manhã','Tarde','Noite','Madrugada'],micro:'O horário em que a fome aperta é onde o plano precisa proteger você primeiro. É ali que a maioria desiste, belisca ou promete recomeçar amanhã.'},
+    {type:'question',id:'caseira',q:'Quantos dias por semana você consegue fazer comida em casa?',img:'projetos/desafio-detox-carnivoro/fotos/quiz/refeicao alta proteina.jpg',imgAlt:'refeicao simples de alta proteina preparada em casa',a:['0 a 1 dia','2 a 3 dias','4 a 5 dias','Quase todo dia'],micro:'Se o plano depende de cozinha perfeita, ele morre na primeira semana corrida. A ideia é funcionar até para quem tem pouco tempo.'},
+    {type:'question',id:'atividade',q:'Quanto consegue fazer de atividade física hoje?',a:['Nada','Pouco em casa','2 a 3 vezes na semana','Já faço academia'],micro:'Última pergunta. A sua análise vai considerar seu corpo de hoje, sua rotina real e o que você consegue começar sem se punir.'},
     {type:'load'},
     {type:'result'}
   ];
@@ -630,6 +667,7 @@ fbq('track', 'PageView');
   }
   function renderIntro(s){
     stage.innerHTML='<div class="qs-intro">'+
+      renderPersona()+
       (s.kicker?'<div class="qs-kicker">'+esc(s.kicker)+'</div>':'')+
       '<h1>'+s.h1+'</h1>'+
       '<p class="sub">'+esc(s.sub)+'</p>'+
@@ -639,9 +677,18 @@ fbq('track', 'PageView');
   }
   function renderQuestion(s){
     var opts=s.a.map(function(t,i){return '<button type="button" class="qs-option" data-act="answer" data-i="'+i+'">'+esc(t)+'</button>';}).join('');
-    stage.innerHTML='<h2 class="qs-q">'+esc(s.q)+'</h2>'+
-      '<div class="qs-options">'+opts+'</div>'+
-      (s.micro?'<div class="qs-microcopy"><strong>👉</strong>'+esc(s.micro)+'</div>':'');
+    var img=s.img?'<div class="qs-question-img"><img src="'+esc(s.img)+'" alt="'+esc(s.imgAlt||'criativo da pergunta')+'">'+(s.creative?'<div class="qs-question-tag">['+esc(s.creative)+']</div>':'')+'</div>':'';
+    stage.innerHTML=renderPersona()+
+      img+
+      '<h2 class="qs-q">'+esc(s.q)+'</h2>'+
+      (s.micro?'<div class="qs-microcopy"><strong>👉</strong>'+esc(s.micro)+'</div>':'')+
+      '<div class="qs-options">'+opts+'</div>';
+  }
+  function renderPersona(){
+    return '<div class="quiz-persona-inline">'+
+      '<div class="quiz-avatar" role="img" aria-label="Dra. Helena Vasconcellos"></div>'+
+      '<div class="quiz-handle">@dra.helena.v <span class="verified" aria-hidden="true">✓</span></div>'+
+    '</div>';
   }
   function renderCreative(s){
     stage.innerHTML='<div class="qs-block">'+
@@ -683,16 +730,24 @@ fbq('track', 'PageView');
       {ms:1500,label:'Gerando seu relatório personalizado'}
     ];
     var lis=stagesL.map(function(st,i){return '<li data-i="'+i+'"><span class="qs-load-icon">'+(i+1)+'</span><span>'+esc(st.label)+'…</span></li>';}).join('');
-    var carousel='';
-    for(var c=1;c<=4;c++){
-      carousel+='<div class="qs-load-card"><img src="https://placehold.co/420x300/c8102e/ffffff/?text=DEPOIMENTO+'+c+'" alt="depoimento"><div class="qs-load-card-cap">[CRIATIVO '+c+': depoimento real autorizado]</div></div>';
+    var carouselImgs=[
+      {src:'projetos/desafio-detox-carnivoro/fotos/pagina de vendas/depoimento.jpg',cap:'Resultado real'},
+      {src:'projetos/desafio-detox-carnivoro/fotos/pagina de vendas/depoimento 2.jpg',cap:'Resultado real'},
+      {src:'projetos/desafio-detox-carnivoro/fotos/pagina de vendas/depoimento 3.jpg',cap:'Resultado real'},
+      {src:'projetos/desafio-detox-carnivoro/fotos/quiz/antes e depois 2.jpg',cap:'Antes e depois'}
+    ];
+    var carCards='';
+    var doubled=carouselImgs.concat(carouselImgs);
+    for(var c=0;c<doubled.length;c++){
+      carCards+='<div class="qs-load-card"><img src="'+doubled[c].src+'" alt="'+doubled[c].cap+'" loading="lazy"><div class="qs-load-card-cap">'+doubled[c].cap+'</div></div>';
     }
+    var carousel='<div class="qs-load-carousel-wrap"><div class="qs-load-carousel">'+carCards+'</div></div>';
     stage.innerHTML='<div class="qs-load">'+
       '<h2>Processando suas informações…</h2>'+
       '<div class="qs-load-bar"><span id="loadBar"></span></div>'+
       '<div class="qs-load-pct" id="loadPct">0%</div>'+
       '<ul class="qs-load-list" id="loadList">'+lis+'</ul>'+
-      '<div class="qs-load-carousel">'+carousel+'</div>'+
+      carousel+
       '<p class="qs-load-foot">Não feche esta página — sua análise está quase pronta.</p>'+
     '</div>';
     var bar=document.getElementById('loadBar');
@@ -787,10 +842,7 @@ fbq('track', 'PageView');
       }
       else if(act==='goto-offer'){
         document.body.classList.add('show-sales');
-        setTimeout(function(){
-          var t=document.getElementById('oferta')||document.getElementById('topo');
-          if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
-        },80);
+        window.scrollTo(0,0);
       }
     });
   }
