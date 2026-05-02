@@ -347,7 +347,7 @@ fbq('track', 'PageView');
   <div class="container">
     <img src="fotos/quiz/refeicao%20alta%20proteina.webp"
          alt="Refeição simples de alta proteína — plano de 21 dias"
-         class="section-img" loading="lazy">
+         class="section-img" fetchpriority="high">
   </div>
 </section>
 
@@ -921,6 +921,13 @@ fbq('track', 'PageView');
       }
       sessionStorage.setItem('ddc_quiz_answers',JSON.stringify(state.answers));
     }catch(e){}
+    // Pré-carrega imagens da sales page enquanto usuário lê o resultado
+    setTimeout(function(){
+      document.querySelectorAll('.sales-page img').forEach(function(img){
+        var src=img.getAttribute('src');
+        if(src){var p=new Image();p.src=src;}
+      });
+    },300);
   }
   if(stage){
     stage.addEventListener('click',function(e){
