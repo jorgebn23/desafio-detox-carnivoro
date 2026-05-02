@@ -637,7 +637,7 @@ fbq('track', 'PageView');
     <p>O tratamento se baseia no consentimento do titular (art. 7º, I, Lei nº 13.709/2018) e na execução de contrato (art. 7º, V).</p>
 
     <h3>5. Compartilhamento de dados</h3>
-    <p>Os dados podem ser compartilhados com plataformas de pagamento (Hotmart) e ferramentas de automação de e-mail, que possuem suas próprias políticas de privacidade. Não vendemos dados a terceiros.</p>
+    <p>Os dados podem ser compartilhados com plataformas de pagamento (PerfectPay) e ferramentas de automação de e-mail, que possuem suas próprias políticas de privacidade. Não vendemos dados a terceiros.</p>
 
     <h3>6. Direitos do titular</h3>
     <p>Você pode, a qualquer momento, acessar, corrigir, excluir ou portar seus dados, além de revogar o consentimento. Envie sua solicitação para suporte@clinicadrahellena.com.br.</p>
@@ -1019,7 +1019,7 @@ fbq('track', 'PageView');
     // TODO: enviar para webhook/CRM antes de redirecionar
     // Trigger pixel event quando pixel ativo: if(typeof fbq==='function'){fbq('track','Lead')}
 
-    var checkoutBase='https://pay.hotmart.com/CHECKOUT_ID_AQUI';
+    var checkoutBase='https://checkout.perfectpay.com.br/pay/PPU38CQBDAU';
     var utms=getUTMs();
     var url=checkoutBase+'?name='+encodeURIComponent(lead.nome)+'&email='+encodeURIComponent(lead.email)+(utms?'&'+utms:'');
     window.location.href=url;
