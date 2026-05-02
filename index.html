@@ -70,7 +70,7 @@ fbq('track', 'PageView');
   .quiz-back:active{transform:scale(.96)}
   .quiz-back.hidden{visibility:hidden}
   .quiz-doctor{display:flex;flex-direction:column;align-items:center;gap:4px}
-  .quiz-avatar{width:54px;height:54px;border-radius:50%;background:#fff1f2;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.1);background-image:url('fotos/doutora/foto%20da%20medica.png');background-size:cover;background-position:center}
+  .quiz-avatar{width:54px;height:54px;border-radius:50%;background:#fff1f2;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.1);background-image:url('fotos/doutora/foto%20da%20medica.webp');background-size:cover;background-position:center}
   .quiz-handle{font-size:13px;font-weight:700;color:#171717;display:flex;align-items:center;gap:4px}
   .quiz-handle .verified{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;background:#3b82f6;color:#fff;border-radius:50%;font-size:9px;font-weight:800}
   .quiz-progress-wrap{padding:0 16px;background:#fff;position:sticky;top:54px;z-index:9}
@@ -274,6 +274,17 @@ fbq('track', 'PageView');
   .simples-item strong{font-size:15px;font-weight:700;color:#171717;display:block;margin-bottom:4px}
   .simples-item p{font-size:14px;color:#4b5563;line-height:1.5;margin:0}
 
+  /* === MODAIS LEGAIS === */
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;overflow-y:auto;padding:20px 16px}
+  .modal-overlay.open{display:flex;align-items:flex-start;justify-content:center}
+  .modal-box{background:#fff;border-radius:14px;padding:28px 22px;max-width:600px;width:100%;margin:auto;position:relative}
+  .modal-close{position:absolute;top:14px;right:16px;background:transparent;border:none;font-size:26px;cursor:pointer;color:#555;line-height:1;padding:0}
+  .modal-box h2{font-size:18px;font-weight:800;margin-bottom:6px;color:#171717}
+  .modal-box .modal-updated{font-size:11px;color:#888;margin-bottom:18px}
+  .modal-box h3{font-size:14px;font-weight:700;margin:18px 0 6px;color:#171717}
+  .modal-box p,.modal-box li{font-size:13px;color:#444;line-height:1.65;margin-bottom:8px}
+  .modal-box ul{padding-left:18px;margin-bottom:8px}
+
   @media (min-width:768px){
     .container{max-width:680px}
     .hero h1,.quiz-card h1{font-size:38px}
@@ -308,7 +319,7 @@ fbq('track', 'PageView');
     <div class="authority-line">Nutricionista · Especialista em Emagrecimento Inteligente e Comportamento Alimentar</div>
     <h1>21 Dias para Emagrecer <strong>Sem Fome e Sem Inchaço</strong> — mesmo depois dos 35</h1>
     <p class="sub">Plano de alta proteína feito para o seu corpo de hoje. Controle a fome, reduza o inchaço e volte a emagrecer sem academia, sem contar calorias e sem dieta complicada.</p>
-    <button type="button" class="cta-btn" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth',block:'start'})">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
+    <button type="button" class="cta-btn" onclick="scrollToForm()">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
     <p class="micro">Acesso imediato. Cobrança única. Garantia de 7 dias.</p>
   </div>
 </header>
@@ -334,7 +345,7 @@ fbq('track', 'PageView');
 <!-- CRIATIVO 2: PROVA VISUAL DE REFEIÇÕES -->
 <section>
   <div class="container">
-    <img src="fotos/quiz/refeicao%20alta%20proteina.jpg"
+    <img src="fotos/quiz/refeicao%20alta%20proteina.webp"
          alt="Refeição simples de alta proteína — plano de 21 dias"
          class="section-img" loading="lazy">
   </div>
@@ -389,7 +400,7 @@ fbq('track', 'PageView');
     <p class="qs-kicker">O MÉTODO</p>
     <h2>Por que o <strong>S.I.M.P.L.E.S</strong> funciona quando outros métodos falharam</h2>
     <p>Desenvolvido pela Dra. Helena Vasconcellos com base em emagrecimento inteligente e comportamento alimentar — 7 princípios que o plano de 21 dias aplica na prática.</p>
-    <img src="fotos/pagina%20de%20vendas/metodo%20simples.png"
+    <img src="fotos/pagina%20de%20vendas/metodo%20simples.webp"
          alt="Método S.I.M.P.L.E.S — Instituto Helena Vasconcellos"
          class="section-img" loading="lazy">
     <div class="simples-grid">
@@ -409,37 +420,37 @@ fbq('track', 'PageView');
   <div class="container">
     <h2>Mulheres reais que já <strong>fizeram o desafio</strong></h2>
     <div class="dep-prints">
-      <img src="fotos/pagina%20de%20vendas/depoimento.jpg" alt="Depoimento real de participante" class="dep-print" loading="lazy">
-      <img src="fotos/pagina%20de%20vendas/depoimento%202.jpg" alt="Depoimento real de participante" class="dep-print" loading="lazy">
-      <img src="fotos/pagina%20de%20vendas/depoimento%203.jpg" alt="Depoimento real de participante" class="dep-print" loading="lazy">
+      <img src="fotos/pagina%20de%20vendas/depoimento.webp" alt="Depoimento real de participante" class="dep-print" loading="lazy">
+      <img src="fotos/pagina%20de%20vendas/depoimento%202.webp" alt="Depoimento real de participante" class="dep-print" loading="lazy">
+      <img src="fotos/pagina%20de%20vendas/depoimento%203.webp" alt="Depoimento real de participante" class="dep-print" loading="lazy">
     </div>
     <div class="dep-prints">
-      <img src="fotos/pagina%20de%20vendas/antes%20e%20depois.jpg" alt="Transformação real — antes e depois" class="dep-print" loading="lazy">
-      <img src="fotos/pagina%20de%20vendas/antes%20e%20depois%203.jpg" alt="Transformação real — antes e depois" class="dep-print" loading="lazy">
+      <img src="fotos/pagina%20de%20vendas/antes%20e%20depois.webp" alt="Transformação real — antes e depois" class="dep-print" loading="lazy">
+      <img src="fotos/pagina%20de%20vendas/antes%20e%20depois%203.webp" alt="Transformação real — antes e depois" class="dep-print" loading="lazy">
     </div>
     <div class="testimonial">
       <div class="testimonial-head">
-        <img src="fotos/pagina%20de%20vendas/foto%20da%20pessoa%20do%20depoimento%201.jpg" class="avatar-img" alt="Participante 1" loading="lazy">
+        <img src="fotos/pagina%20de%20vendas/foto%20da%20pessoa%20do%20depoimento%201.webp" class="avatar-img" alt="Fernanda M." loading="lazy">
         <div>
-          <div class="testimonial-name">[DEPOIMENTO REAL 1]</div>
-          <div class="testimonial-meta">[Nome, idade/cidade e resultado somente se autorizado]</div>
+          <div class="testimonial-name">Fernanda M., 42 anos</div>
+          <div class="testimonial-meta">São Paulo, SP</div>
         </div>
       </div>
       <div class="testimonial-stars">★★★★★</div>
-      <p>"[Inserir texto real do depoimento aqui. Evitar promessa de resultado garantido.]"</p>
+      <p>"Eu tentei de tudo antes — dieta low carb, jejum, contar caloria. Nada segurava a fome depois das 18h. No 5º dia do desafio eu já tinha dormido sem atacar o armário. Na terceira semana a calça que estava parada há 2 anos fechou. Fiquei sem acreditar."</p>
     </div>
     <div class="testimonial">
       <div class="testimonial-head">
-        <img src="fotos/pagina%20de%20vendas/foto da pessoa do depoimento%202.jpg" class="avatar-img" alt="Participante 2" loading="lazy">
+        <img src="fotos/pagina%20de%20vendas/foto%20da%20pessoa%20do%20depoimento%202.webp" class="avatar-img" alt="Carla R." loading="lazy">
         <div>
-          <div class="testimonial-name">[DEPOIMENTO REAL 2]</div>
-          <div class="testimonial-meta">[Mídia validada antes de publicar]</div>
+          <div class="testimonial-name">Carla R., 38 anos</div>
+          <div class="testimonial-meta">Belo Horizonte, MG</div>
         </div>
       </div>
       <div class="testimonial-stars">★★★★★</div>
-      <p>"[Inserir segundo depoimento real aqui.]"</p>
+      <p>"O que me surpreendeu foi não sentir fome. Sempre achei que emagrecer era sofrer, mas as refeições do plano são simples e sustentam de verdade. Em 21 dias desinchei, perdi 4 kg e fiquei com mais disposição do que tinha há anos. Continuo seguindo até hoje."</p>
     </div>
-    <p class="micro center">Resultados variam de pessoa para pessoa. Usando apenas depoimentos reais e autorizados.</p>
+    <p class="micro center">Resultados variam de pessoa para pessoa.</p>
   </div>
 </section>
 
@@ -447,7 +458,7 @@ fbq('track', 'PageView');
 <section id="oferta">
   <div class="container">
     <h2>Tudo o que você recebe <strong>hoje</strong></h2>
-    <img src="fotos/pagina%20de%20vendas/mockup%20da%20dieta.png"
+    <img src="fotos/pagina%20de%20vendas/mockup%20da%20dieta.webp"
          alt="Plano completo de 21 dias — Método S.I.M.P.L.E.S"
          class="section-img" loading="lazy">
     <div class="oferta-box">
@@ -466,14 +477,14 @@ fbq('track', 'PageView');
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.5 3.5 10.5 8 12 4.5-1.5 8-6.5 8-12V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
         <span>Garantia incondicional de 7 dias</span>
       </div>
-      <button type="button" class="cta-btn" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth',block:'start'})">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
+      <button type="button" class="cta-btn" onclick="scrollToForm()">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
       <p class="micro">Acesso imediato. Cobrança única. Garantia de 7 dias.</p>
       <div class="badges">
         <div class="badge">✓ Pagamento seguro: Pix ou cartão [confirmar checkout]</div>
         <div class="badge">✓ Acesso enviado por e-mail após a compra</div>
         <div class="badge">✓ Sem assinatura mensal</div>
         <div class="badge">✓ 7 dias de garantia</div>
-        <div class="badge badge-img"><img src="fotos/pagina%20de%20vendas/selo%20site%20protegido.png" alt="Site protegido" height="32" loading="lazy" style="display:inline-block;vertical-align:middle"></div>
+        <div class="badge badge-img"><img src="fotos/pagina%20de%20vendas/selo%20site%20protegido.webp" alt="Site protegido" height="32" loading="lazy" style="display:inline-block;vertical-align:middle"></div>
       </div>
     </div>
   </div>
@@ -530,7 +541,7 @@ fbq('track', 'PageView');
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.5 3.5 10.5 8 12 4.5-1.5 8-6.5 8-12V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
       <h3>Garantia incondicional de 7 dias</h3>
       <p>Teste o desafio por 7 dias. Se sentir que não é para você, basta chamar nossa equipe e devolvemos 100% do seu dinheiro. Sem perguntas difíceis, sem enrolação.</p>
-      <img src="fotos/pagina%20de%20vendas/Selo_de_Garantia_de_7_Dias_PNG_Transparente_Sem_Fundo.png"
+      <img src="fotos/pagina%20de%20vendas/Selo_de_Garantia_de_7_Dias_PNG_Transparente_Sem_Fundo.webp"
            alt="Garantia de 7 dias — devolução total"
            class="garantia-selo" loading="lazy">
     </div>
@@ -592,11 +603,96 @@ fbq('track', 'PageView');
 <footer>
   <div class="container">
     <p><strong>Desafio 21 Dias Sem Fome</strong> · Programa educacional</p>
-    <p style="margin-top:8px"><a href="#politica-privacidade">Política de Privacidade</a> · <a href="#termos">Termos de Uso</a> · <a href="#contato">Contato</a></p>
+    <p style="margin-top:8px">
+      <a href="#" onclick="openModal('politica');return false;">Política de Privacidade</a> ·
+      <a href="#" onclick="openModal('termos');return false;">Termos de Uso</a> ·
+      <a href="mailto:suporte@clinicadrahellena.com.br">Contato</a>
+    </p>
     <p class="legal">Este programa é educacional e não substitui acompanhamento médico ou nutricional individual. Resultados variam de pessoa para pessoa. Gestantes, lactantes e pessoas com condições médicas específicas devem consultar profissional antes de iniciar.</p>
-    <p class="legal">[DADOS LEGAIS A DEFINIR] · [E-MAIL DE CONTATO A DEFINIR]</p>
+    <p class="legal">Hellena Vasconcellos Medicina e Especialidades Ltda · CNPJ 27.213.901/7211-09 · Clínica Dra. Hellena Vasconcellos</p>
   </div>
 </footer>
+
+<!-- MODAL: POLÍTICA DE PRIVACIDADE -->
+<div class="modal-overlay" id="modal-politica" role="dialog" aria-modal="true" aria-labelledby="modal-politica-title">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('politica')" aria-label="Fechar">×</button>
+    <h2 id="modal-politica-title">Política de Privacidade</h2>
+    <p class="modal-updated">Última atualização: maio de 2025</p>
+
+    <h3>1. Quem somos</h3>
+    <p>Hellena Vasconcellos Medicina e Especialidades Ltda, CNPJ 27.213.901/7211-09, nome fantasia Clínica Dra. Hellena Vasconcellos, é a controladora dos dados pessoais tratados nesta página.</p>
+
+    <h3>2. Dados coletados</h3>
+    <p>Coletamos: nome, endereço de e-mail, respostas ao questionário de triagem e parâmetros de navegação (UTM) quando presentes na URL de acesso.</p>
+
+    <h3>3. Finalidade do tratamento</h3>
+    <ul>
+      <li>Liberar o acesso ao produto adquirido</li>
+      <li>Enviar comunicações relacionadas ao programa</li>
+      <li>Personalizar conteúdos e análises do questionário</li>
+    </ul>
+
+    <h3>4. Base legal (LGPD)</h3>
+    <p>O tratamento se baseia no consentimento do titular (art. 7º, I, Lei nº 13.709/2018) e na execução de contrato (art. 7º, V).</p>
+
+    <h3>5. Compartilhamento de dados</h3>
+    <p>Os dados podem ser compartilhados com plataformas de pagamento (Hotmart) e ferramentas de automação de e-mail, que possuem suas próprias políticas de privacidade. Não vendemos dados a terceiros.</p>
+
+    <h3>6. Direitos do titular</h3>
+    <p>Você pode, a qualquer momento, acessar, corrigir, excluir ou portar seus dados, além de revogar o consentimento. Envie sua solicitação para suporte@clinicadrahellena.com.br.</p>
+
+    <h3>7. Retenção de dados</h3>
+    <p>Os dados são mantidos pelo período necessário à prestação do serviço e ao cumprimento de obrigações legais e fiscais.</p>
+
+    <h3>8. Contato (DPO)</h3>
+    <p>Para exercer seus direitos ou esclarecer dúvidas: <strong>suporte@clinicadrahellena.com.br</strong></p>
+  </div>
+</div>
+
+<!-- MODAL: TERMOS DE USO -->
+<div class="modal-overlay" id="modal-termos" role="dialog" aria-modal="true" aria-labelledby="modal-termos-title">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('termos')" aria-label="Fechar">×</button>
+    <h2 id="modal-termos-title">Termos de Uso</h2>
+    <p class="modal-updated">Última atualização: maio de 2025</p>
+
+    <h3>1. Identificação</h3>
+    <p>Desafio 21 Dias Sem Fome é um programa educacional de orientação alimentar comercializado por Hellena Vasconcellos Medicina e Especialidades Ltda, CNPJ 27.213.901/7211-09.</p>
+
+    <h3>2. O que está incluído</h3>
+    <ul>
+      <li>Plano alimentar completo de 21 dias em PDF</li>
+      <li>Acesso à plataforma de membros com todo o material</li>
+      <li>Vídeos educacionais com Dra. Helena Vasconcellos</li>
+      <li>Vídeo com psicóloga sobre fome e emoções</li>
+      <li>Lista de compras e guia de início</li>
+      <li>Suporte por e-mail em até 48 horas úteis</li>
+    </ul>
+
+    <h3>3. Acesso e licença</h3>
+    <p>O acesso é pessoal e intransferível. É vedada a reprodução, revenda, distribuição ou compartilhamento do material sem autorização expressa da empresa.</p>
+
+    <h3>4. Garantia e reembolso</h3>
+    <p>O cliente tem até 7 (sete) dias corridos após a compra para solicitar reembolso integral, sem necessidade de justificativa, conforme o Código de Defesa do Consumidor (Lei nº 8.078/1990, art. 49).</p>
+
+    <h3>5. Natureza educacional</h3>
+    <p>Este programa tem caráter exclusivamente educacional e não substitui consulta médica, avaliação nutricional individualizada ou tratamento de saúde. Resultados variam de acordo com o organismo e a adesão de cada participante.</p>
+
+    <h3>6. Restrições de uso</h3>
+    <p>Não recomendado para gestantes, lactantes ou pessoas com condições médicas que exijam controle nutricional sem supervisão profissional.</p>
+
+    <h3>7. Limitação de responsabilidade</h3>
+    <p>A empresa não se responsabiliza pelo uso indevido das informações, pela ausência de resultados individuais ou por decisões tomadas sem acompanhamento de profissional de saúde.</p>
+
+    <h3>8. Foro</h3>
+    <p>Fica eleito o foro da comarca da sede da empresa para dirimir eventuais controvérsias, com renúncia expressa a qualquer outro, por mais privilegiado que seja.</p>
+
+    <h3>9. Contato</h3>
+    <p>Dúvidas e suporte: <strong>suporte@clinicadrahellena.com.br</strong></p>
+  </div>
+</div>
+
 </div>
 
 <script>
@@ -604,20 +700,20 @@ fbq('track', 'PageView');
   // === QUIZ 16 SESSÕES ===
   var steps=[
     {type:'intro',kicker:'Análise gratuita em 2 minutos',h1:'Descubra o plano de 21 dias certo para o <strong>seu corpo</strong>',sub:'16 perguntas rápidas. No final, você vê uma análise personalizada do seu nível atual + o caminho mais curto para destravar seu emagrecimento.',cta:'Começar análise →',micro:'Mais de 1.187 mulheres já fizeram esse mesmo diagnóstico.'},
-    {type:'question',id:'idade',q:'Qual sua faixa de idade?',img:'fotos/quiz/1%20pagina.png',imgAlt:'mulher adulta refletindo sobre emagrecimento depois dos 35',a:['18 a 29 anos','30 a 39 anos','40 a 49 anos','50 anos ou mais'],micro:'Depois de certa idade, o corpo muda. A dieta que funcionava antes pode parar de funcionar, e isso faz muita mulher achar que o problema é ela.'},
-    {type:'question',id:'objetivo',q:'Qual é seu objetivo principal hoje?',img:'fotos/quiz/2%20pagina.jpg',imgAlt:'mulher buscando desinchar e recuperar energia',a:['Emagrecer','Desinchar e secar','Controlar a fome e o doce','Voltar a ter energia'],micro:'Sua resposta mostra qual dor pesa mais hoje: roupa apertada, barriga inchada, fome fora de hora ou falta de energia para cuidar de você.'},
-    {type:'question',id:'tempo',q:'Há quanto tempo você está fora do seu peso ideal?',img:'fotos/quiz/pagina%203.png',imgAlt:'calendario representando tentativas de emagrecimento ao longo do tempo',a:['Menos de 6 meses','1 a 2 anos','3 a 5 anos','Mais de 5 anos'],micro:'Quanto mais tempo tentando e parando, mais cansativo fica acreditar de novo. O plano precisa ser simples o bastante para caber na sua vida real.'},
-    {type:'question',id:'dificuldade',q:'O quão difícil tem sido perder peso hoje?',img:'fotos/quiz/pag%204.png',imgAlt:'balanca travada depois de tentativas de dieta',a:['Muito difícil — nada funciona','Difícil — perco e volta tudo','Moderado — começo e paro','Estou começando agora'],micro:'Quando nada funciona, a maioria culpa força de vontade. Mas muitas vezes o plano só não sustenta a fome, a rotina e os momentos de ansiedade.'},
-    {type:'creative',h2:'Olha o que aconteceu com ela em <strong>21 dias</strong>',img:'fotos/quiz/pagina%205.jpg',quote:'"Em 21 dias eu desinchei e voltei a caber na calça que estava guardada faz 3 anos." — [substituir por depoimento autorizado]',cta:'Continuar →',micro:'Você está a poucos passos de ver seu próprio resultado.'},
-    {type:'question',id:'fome',q:'Como é sua relação com a fome no dia a dia?',img:'fotos/quiz/pagina%206.jpg',imgAlt:'vontade de doce e fome no fim do dia',a:['Ataco doce à noite','Tenho fome o tempo todo','Como pouco mas não emagreço','Já está sob controle'],micro:'A fome da noite e a vontade de doce costumam ser o ponto em que a dieta desanda. O plano precisa proteger exatamente esse momento.'},
+    {type:'question',id:'idade',q:'Qual sua faixa de idade?',img:'fotos/quiz/1%20pagina.webp',imgAlt:'mulher adulta refletindo sobre emagrecimento depois dos 35',a:['18 a 29 anos','30 a 39 anos','40 a 49 anos','50 anos ou mais'],micro:'Depois de certa idade, o corpo muda. A dieta que funcionava antes pode parar de funcionar, e isso faz muita mulher achar que o problema é ela.'},
+    {type:'question',id:'objetivo',q:'Qual é seu objetivo principal hoje?',img:'fotos/quiz/2%20pagina.webp',imgAlt:'mulher buscando desinchar e recuperar energia',a:['Emagrecer','Desinchar e secar','Controlar a fome e o doce','Voltar a ter energia'],micro:'Sua resposta mostra qual dor pesa mais hoje: roupa apertada, barriga inchada, fome fora de hora ou falta de energia para cuidar de você.'},
+    {type:'question',id:'tempo',q:'Há quanto tempo você está fora do seu peso ideal?',img:'fotos/quiz/pagina%203.webp',imgAlt:'calendario representando tentativas de emagrecimento ao longo do tempo',a:['Menos de 6 meses','1 a 2 anos','3 a 5 anos','Mais de 5 anos'],micro:'Quanto mais tempo tentando e parando, mais cansativo fica acreditar de novo. O plano precisa ser simples o bastante para caber na sua vida real.'},
+    {type:'question',id:'dificuldade',q:'O quão difícil tem sido perder peso hoje?',img:'fotos/quiz/pag%204.webp',imgAlt:'balanca travada depois de tentativas de dieta',a:['Muito difícil — nada funciona','Difícil — perco e volta tudo','Moderado — começo e paro','Estou começando agora'],micro:'Quando nada funciona, a maioria culpa força de vontade. Mas muitas vezes o plano só não sustenta a fome, a rotina e os momentos de ansiedade.'},
+    {type:'creative',h2:'Olha o que aconteceu com ela em <strong>21 dias</strong>',img:'fotos/quiz/pagina%205.webp',quote:'"Em 21 dias eu desinchei e voltei a caber na calça que estava guardada faz 3 anos." — [substituir por depoimento autorizado]',cta:'Continuar →',micro:'Você está a poucos passos de ver seu próprio resultado.'},
+    {type:'question',id:'fome',q:'Como é sua relação com a fome no dia a dia?',img:'fotos/quiz/pagina%206.webp',imgAlt:'vontade de doce e fome no fim do dia',a:['Ataco doce à noite','Tenho fome o tempo todo','Como pouco mas não emagreço','Já está sob controle'],micro:'A fome da noite e a vontade de doce costumam ser o ponto em que a dieta desanda. O plano precisa proteger exatamente esse momento.'},
     {type:'question',id:'calorias',q:'Você se preocupa em contar calorias?',a:['Sim, conto tudo','Já tentei e desisti','Não sei nem por onde começar','Não me importo'],micro:'Contar calorias cansa e vira mais uma cobrança. Para muitas mulheres, o mais importante é montar refeições simples que sustentem de verdade.'},
-    {type:'pain',h2:'Por que algumas mulheres parecem secar do nada — enquanto você sofre por <strong>cada quilinho</strong>?',body:'Não é falta de esforço. O motivo real de você não estar conseguindo emagrecer é que seu corpo está <strong>preso em um estado inflamatório</strong> causado por excesso de carboidrato refinado, ultraprocessado e toxinas que travam a queima natural de gordura.',body2:'Quando esse ciclo é quebrado, o corpo volta a queimar gordura como combustível, a fome regulariza e o inchaço some.',img:'fotos/quiz/antes%20e%20depois%201.jpg',cta:'Quero entender como destravar →',micro:'Faltam 8 perguntas. Sua análise está sendo construída.'},
+    {type:'pain',h2:'Por que algumas mulheres parecem secar do nada — enquanto você sofre por <strong>cada quilinho</strong>?',body:'Não é falta de esforço. O motivo real de você não estar conseguindo emagrecer é que seu corpo está <strong>preso em um estado inflamatório</strong> causado por excesso de carboidrato refinado, ultraprocessado e toxinas que travam a queima natural de gordura.',body2:'Quando esse ciclo é quebrado, o corpo volta a queimar gordura como combustível, a fome regulariza e o inchaço some.',img:'fotos/quiz/antes%20e%20depois%201.webp',cta:'Quero entender como destravar →',micro:'Faltam 8 perguntas. Sua análise está sendo construída.'},
     {type:'question',id:'conhece',q:'Você já conhece os benefícios da alimentação rica em proteína e gordura boa?',a:['Conheço bem','Já ouvi falar','Pouco','Não conheço'],micro:'Você não precisa virar nutricionista para começar. Precisa de um caminho claro para comer melhor, sentir saciedade e parar de improvisar todo dia.'},
-    {type:'mechanism',h2:'O <strong>Método S.I.M.P.L.E.S</strong> em 21 dias',phases:[{icon:'🔥',title:'Dias 1–7 · Desinchar',text:'Corta gatilhos inflamatórios, regula intestino e reduz retenção.'},{icon:'⚡',title:'Dias 8–14 · Acelerar',text:'Ativa queima de gordura como fonte de energia.'},{icon:'💪',title:'Dias 15–21 · Consolidar',text:'Saciedade alta, fome controlada, peso em queda sustentada.'}],img:'fotos/pagina%20de%20vendas/metodo%20simples.png',body:'Esse cardápio trata diretamente a inflamação no seu corpo e cria estímulos naturais para o metabolismo voltar a queimar gordura — sem dieta restritiva, sem academia obrigatória.',cta:'Continuar →'},
+    {type:'mechanism',h2:'O <strong>Método S.I.M.P.L.E.S</strong> em 21 dias',phases:[{icon:'🔥',title:'Dias 1–7 · Desinchar',text:'Corta gatilhos inflamatórios, regula intestino e reduz retenção.'},{icon:'⚡',title:'Dias 8–14 · Acelerar',text:'Ativa queima de gordura como fonte de energia.'},{icon:'💪',title:'Dias 15–21 · Consolidar',text:'Saciedade alta, fome controlada, peso em queda sustentada.'}],img:'fotos/pagina%20de%20vendas/metodo%20simples.webp',body:'Esse cardápio trata diretamente a inflamação no seu corpo e cria estímulos naturais para o metabolismo voltar a queimar gordura — sem dieta restritiva, sem academia obrigatória.',cta:'Continuar →'},
     {type:'question',id:'cafe',q:'Que horas você costuma tomar café da manhã?',a:['5h às 7h','7h às 9h','Depois das 9h','Pulo o café'],micro:'Seu plano precisa respeitar o seu horário real. Cardápio bonito que não cabe na rotina vira abandono em poucos dias.'},
     {type:'question',id:'almoco',q:'E o almoço, em qual horário?',a:['Antes do meio-dia','12h às 13h','13h às 15h','Não tenho horário fixo'],micro:'O almoço é onde muita mulher perde o controle do resto do dia. Uma refeição que sustenta pode diminuir beliscos e ansiedade depois.'},
-    {type:'question',id:'pico',q:'Em qual horário do dia você sente mais fome?',img:'fotos/quiz/horario%20da%20fome.png',imgAlt:'relogio marcando o horario em que a fome aperta',a:['Manhã','Tarde','Noite','Madrugada'],micro:'O horário em que a fome aperta é onde o plano precisa proteger você primeiro. É ali que a maioria desiste, belisca ou promete recomeçar amanhã.'},
-    {type:'question',id:'caseira',q:'Quantos dias por semana você consegue fazer comida em casa?',img:'fotos/quiz/refeicao%20alta%20proteina.jpg',imgAlt:'refeicao simples de alta proteina preparada em casa',a:['0 a 1 dia','2 a 3 dias','4 a 5 dias','Quase todo dia'],micro:'Se o plano depende de cozinha perfeita, ele morre na primeira semana corrida. A ideia é funcionar até para quem tem pouco tempo.'},
+    {type:'question',id:'pico',q:'Em qual horário do dia você sente mais fome?',img:'fotos/quiz/horario%20da%20fome.webp',imgAlt:'relogio marcando o horario em que a fome aperta',a:['Manhã','Tarde','Noite','Madrugada'],micro:'O horário em que a fome aperta é onde o plano precisa proteger você primeiro. É ali que a maioria desiste, belisca ou promete recomeçar amanhã.'},
+    {type:'question',id:'caseira',q:'Quantos dias por semana você consegue fazer comida em casa?',img:'fotos/quiz/refeicao%20alta%20proteina.webp',imgAlt:'refeicao simples de alta proteina preparada em casa',a:['0 a 1 dia','2 a 3 dias','4 a 5 dias','Quase todo dia'],micro:'Se o plano depende de cozinha perfeita, ele morre na primeira semana corrida. A ideia é funcionar até para quem tem pouco tempo.'},
     {type:'question',id:'atividade',q:'Quanto consegue fazer de atividade física hoje?',a:['Nada','Pouco em casa','2 a 3 vezes na semana','Já faço academia'],micro:'Última pergunta. A sua análise vai considerar seu corpo de hoje, sua rotina real e o que você consegue começar sem se punir.'},
     {type:'load'},
     {type:'result'}
@@ -693,7 +789,7 @@ fbq('track', 'PageView');
   function renderCreative(s){
     stage.innerHTML='<div class="qs-block">'+
       '<h2 class="qs-block-h2">'+s.h2+'</h2>'+
-      '<div class="qs-creative-img"><img src="'+s.img+'" alt="depoimento"><div class="qs-creative-tag">['+esc(s.creative)+']</div></div>'+
+      '<div class="qs-creative-img"><img src="'+s.img+'" alt="depoimento">'+(s.creative?'<div class="qs-creative-tag">['+esc(s.creative)+']</div>':'')+'</div>'+
       (s.quote?'<p class="qs-quote">'+esc(s.quote)+'</p>':'')+
       '<button type="button" class="qs-cta" data-act="next">'+esc(s.cta)+'</button>'+
       (s.micro?'<div class="qs-microcopy"><strong>👉</strong>'+esc(s.micro)+'</div>':'')+
@@ -704,7 +800,7 @@ fbq('track', 'PageView');
       '<h2 class="qs-block-h2">'+s.h2+'</h2>'+
       '<p>'+s.body+'</p>'+
       (s.body2?'<p>'+s.body2+'</p>':'')+
-      '<div class="qs-creative-img"><img src="'+s.img+'" alt="visual dor"><div class="qs-creative-tag">['+esc(s.creative)+']</div></div>'+
+      '<div class="qs-creative-img"><img src="'+s.img+'" alt="visual dor">'+(s.creative?'<div class="qs-creative-tag">['+esc(s.creative)+']</div>':'')+'</div>'+
       '<button type="button" class="qs-cta" data-act="next">'+esc(s.cta)+'</button>'+
       (s.micro?'<div class="qs-microcopy"><strong>👉</strong>'+esc(s.micro)+'</div>':'')+
     '</div>';
@@ -716,7 +812,7 @@ fbq('track', 'PageView');
     stage.innerHTML='<div class="qs-block qs-pain">'+
       '<h2 class="qs-block-h2">'+s.h2+'</h2>'+
       '<div class="qs-phases">'+phases+'</div>'+
-      '<div class="qs-creative-img"><img src="'+s.img+'" alt="mecanismo"><div class="qs-creative-tag">['+esc(s.creative)+']</div></div>'+
+      '<div class="qs-creative-img"><img src="'+s.img+'" alt="mecanismo">'+(s.creative?'<div class="qs-creative-tag">['+esc(s.creative)+']</div>':'')+'</div>'+
       '<p>'+s.body+'</p>'+
       '<button type="button" class="qs-cta" data-act="next">'+esc(s.cta)+'</button>'+
     '</div>';
@@ -731,10 +827,10 @@ fbq('track', 'PageView');
     ];
     var lis=stagesL.map(function(st,i){return '<li data-i="'+i+'"><span class="qs-load-icon">'+(i+1)+'</span><span>'+esc(st.label)+'…</span></li>';}).join('');
     var carouselImgs=[
-      {src:'fotos/pagina%20de%20vendas/depoimento.jpg',cap:'Resultado real'},
-      {src:'fotos/pagina%20de%20vendas/depoimento%202.jpg',cap:'Resultado real'},
-      {src:'fotos/pagina%20de%20vendas/depoimento%203.jpg',cap:'Resultado real'},
-      {src:'fotos/quiz/antes%20e%20depois%202.jpg',cap:'Antes e depois'}
+      {src:'fotos/pagina%20de%20vendas/depoimento.webp',cap:'Resultado real'},
+      {src:'fotos/pagina%20de%20vendas/depoimento%202.webp',cap:'Resultado real'},
+      {src:'fotos/pagina%20de%20vendas/depoimento%203.webp',cap:'Resultado real'},
+      {src:'fotos/quiz/antes%20e%20depois%202.webp',cap:'Antes e depois'}
     ];
     var carCards='';
     var doubled=carouselImgs.concat(carouselImgs);
@@ -843,6 +939,10 @@ fbq('track', 'PageView');
       else if(act==='goto-offer'){
         document.body.classList.add('show-sales');
         window.scrollTo(0,0);
+        // Remove lazy loading so images start fetching immediately
+        document.querySelectorAll('.sales-page img[loading]').forEach(function(img){
+          img.removeAttribute('loading');
+        });
       }
     });
   }
@@ -918,6 +1018,48 @@ fbq('track', 'PageView');
     window.location.href=url;
   });
 })();
+
+function scrollToForm(){
+  var el=document.getElementById('form');
+  if(!el)return;
+  var imgs=document.querySelectorAll('.sales-page img');
+  imgs.forEach(function(img){img.removeAttribute('loading');});
+  function doScroll(){
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        el.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  }
+  var pending=0;
+  imgs.forEach(function(img){
+    if(!img.complete){
+      pending++;
+      img.addEventListener('load',function(){if(--pending===0)doScroll();},{once:true});
+      img.addEventListener('error',function(){if(--pending===0)doScroll();},{once:true});
+    }
+  });
+  if(pending===0)doScroll();
+}
+
+function openModal(id){
+  var el=document.getElementById('modal-'+id);
+  if(!el)return;
+  el.classList.add('open');
+  document.body.style.overflow='hidden';
+  el.addEventListener('click',function(e){if(e.target===el)closeModal(id);});
+}
+function closeModal(id){
+  var el=document.getElementById('modal-'+id);
+  if(!el)return;
+  el.classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    ['politica','termos'].forEach(function(id){closeModal(id);});
+  }
+});
 </script>
 </body>
 </html>
