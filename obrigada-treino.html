@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+<meta name="description" content="Compra confirmada — Treino Queima Gordura em Casa. Acesso enviado por e-mail.">
+<meta name="robots" content="noindex,nofollow">
+<title>Compra Confirmada — Treino Queima Gordura em Casa</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:16px;line-height:1.6;color:#171717;background:#f0f4ff;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none}
+  .container{width:100%;max-width:520px;margin:0 auto;padding:0 20px}
+  p{margin-bottom:12px;color:#444}
+
+  @keyframes checkIn{0%{transform:scale(0);opacity:0}60%{transform:scale(1.18)}100%{transform:scale(1);opacity:1}}
+  @keyframes drawCheck{from{stroke-dashoffset:52}to{stroke-dashoffset:0}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+  .page-header{background:#fff;border-bottom:2px solid #bfdbfe;padding:14px 0;text-align:center}
+  .header-logo{font-size:15px;font-weight:800;color:#1d4ed8;letter-spacing:1.5px;text-transform:uppercase}
+  .header-sub{font-size:12px;color:#888;margin-top:2px;font-weight:500}
+
+  .hero-confirm{background:linear-gradient(160deg,#eff6ff 0%,#fff 70%);padding:40px 0 32px;text-align:center;animation:fadeUp .5s ease both}
+  .check-wrap{display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;animation:checkIn .55s cubic-bezier(.34,1.56,.64,1) both}
+  .check-wrap svg{width:80px;height:80px}
+  .check-circle{fill:#f0fdf4;stroke:#16a34a;stroke-width:2}
+  .check-mark{fill:none;stroke:#16a34a;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:52;stroke-dashoffset:52;animation:drawCheck .45s .35s ease forwards}
+  .hero-confirm h1{font-size:24px;font-weight:800;line-height:1.25;color:#171717;margin-bottom:10px}
+  .hero-confirm h1 span{color:#1d4ed8}
+  .hero-confirm .sub{font-size:15px;color:#555;line-height:1.55;max-width:380px;margin:0 auto}
+  .email-badge{display:inline-flex;align-items:center;gap:6px;background:#dbeafe;color:#1e3a8a;border-radius:20px;padding:6px 14px;font-size:13px;font-weight:700;margin-top:14px}
+
+  .produto-section{padding:0 0 28px;animation:fadeUp .5s .15s ease both}
+  .produto-card{background:linear-gradient(135deg,#1d4ed8 0%,#1e3a8a 100%);border-radius:16px;padding:24px 20px;color:#fff;text-align:center;box-shadow:0 8px 28px rgba(29,78,216,.3)}
+  .produto-badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:4px 14px;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:14px}
+  .produto-card h2{font-size:20px;font-weight:800;color:#fff;margin-bottom:6px;line-height:1.3}
+  .produto-card h2 strong{color:#bfdbfe}
+  .produto-sub{font-size:14px;color:#bfdbfe;font-style:italic;margin-bottom:14px}
+  .produto-img{width:140px;margin:14px auto 0;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);display:block}
+  .produto-meta{font-size:12px;color:rgba(255,255,255,.75);margin:14px 0 0;display:flex;align-items:center;justify-content:center;gap:6px}
+  .produto-meta::before{content:"📧"}
+
+  .passos-section{padding:0 0 28px;animation:fadeUp .5s .25s ease both}
+  .passos-section h2{font-size:20px;font-weight:800;color:#171717;text-align:center;margin-bottom:18px}
+  .passos-section h2 span{color:#1d4ed8}
+  .passo{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #bfdbfe;border-radius:12px;padding:16px;margin-bottom:10px;box-shadow:0 2px 8px rgba(29,78,216,.06)}
+  .passo-num{width:36px;height:36px;border-radius:50%;background:#1d4ed8;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+  .passo-body h3{font-size:15px;font-weight:700;color:#171717;margin-bottom:4px}
+  .passo-body p{font-size:14px;color:#555;margin:0;line-height:1.5}
+
+  .msg-section{padding:0 0 40px;animation:fadeUp .5s .35s ease both}
+  .msg-card{background:#fff;border:1px solid #bfdbfe;border-radius:14px;padding:22px 18px;display:flex;gap:14px;align-items:flex-start}
+  .dra-avatar-img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;border:3px solid #bfdbfe;box-shadow:0 2px 10px rgba(29,78,216,.2)}
+  .dra-info{margin-bottom:10px}
+  .dra-name{font-size:15px;font-weight:800;color:#171717}
+  .dra-cred{font-size:12px;color:#888}
+  .msg-card p{font-size:14px;color:#444;line-height:1.6;margin:0}
+
+  footer{background:#171717;color:#bbb;padding:28px 0;font-size:13px;text-align:center;line-height:1.7}
+  footer p{color:#bbb;margin-bottom:8px}
+  footer a{color:#bfdbfe;text-decoration:underline}
+  .legal{font-size:11px;color:#666;margin-top:12px;line-height:1.5}
+
+  @media(min-width:768px){.container{max-width:600px}.hero-confirm h1{font-size:30px}}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="header-logo">Método S.I.M.P.L.E.S</div>
+  <div class="header-sub">Dra. Helena Vasconcellos · Nutricionista</div>
+</header>
+
+<section class="hero-confirm">
+  <div class="container">
+    <div class="check-wrap" aria-hidden="true">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="check-circle" cx="40" cy="40" r="38"/>
+        <polyline class="check-mark" points="22,42 34,54 58,28"/>
+      </svg>
+    </div>
+    <h1>Compra Confirmada!<br><span>Seu Treino está a caminho</span> 💙</h1>
+    <p class="sub">Seu acesso ao Treino Queima Gordura em Casa será enviado por e-mail em até 5 minutos.</p>
+    <div class="email-badge">📩 Verifique sua caixa de entrada e o spam</div>
+  </div>
+</section>
+
+<section class="produto-section">
+  <div class="container">
+    <div class="produto-card">
+      <div class="produto-badge">✓ Você acabou de garantir</div>
+      <h2><strong>Treino Queima Gordura em Casa</strong></h2>
+      <p class="produto-sub">15 Minutos por Dia — Sem Academia, Sem Equipamento</p>
+      <img src="fotos/PRODUTOS/capas/capa-treino-queima-gordura.png" alt="Treino Queima Gordura em Casa" class="produto-img">
+      <p class="produto-meta">Material enviado para o seu e-mail cadastrado</p>
+    </div>
+  </div>
+</section>
+
+<section class="passos-section">
+  <div class="container">
+    <h2>O que fazer <span>agora</span></h2>
+
+    <div class="passo">
+      <div class="passo-num">1</div>
+      <div class="passo-body">
+        <h3>Verifique seu e-mail</h3>
+        <p>Procure uma mensagem de Dra. Helena Vasconcellos. Se não encontrar, cheque a pasta de spam ou promoções.</p>
+      </div>
+    </div>
+
+    <div class="passo">
+      <div class="passo-num">2</div>
+      <div class="passo-body">
+        <h3>Baixe o material</h3>
+        <p>Salve o PDF no celular para consultar a qualquer hora. Os 7 exercícios estão detalhados com imagens e tempo.</p>
+      </div>
+    </div>
+
+    <div class="passo">
+      <div class="passo-num">3</div>
+      <div class="passo-body">
+        <h3>Treine hoje — 15 minutos</h3>
+        <p>Não espere segunda-feira. O treino foi feito para caber em qualquer horário do dia, inclusive dividido em blocos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="msg-section">
+  <div class="container">
+    <div class="msg-card">
+      <img src="fotos/doutora/foto%20da%20medica.webp" alt="Dra. Helena Vasconcellos" class="dra-avatar-img">
+      <div>
+        <div class="dra-info">
+          <div class="dra-name">Dra. Helena Vasconcellos</div>
+          <div class="dra-cred">Nutricionista · Método S.I.M.P.L.E.S</div>
+        </div>
+        <p>"15 minutos parece pouco — mas é o suficiente para mudar o seu corpo em 3 semanas. O segredo não é a intensidade. É a consistência. Faça hoje, faça amanhã, faça depois de amanhã. O resultado vem para quem aparece. 💙"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Treino Queima Gordura em Casa</strong> · Método S.I.M.P.L.E.S · @dra.helena.v</p>
+    <p style="margin-top:8px">
+      <a href="#">Política de Privacidade</a> ·
+      <a href="#">Termos de Uso</a> ·
+      <a href="mailto:suporte@clinicadrahellena.com.br">Contato</a>
+    </p>
+    <p class="legal">Este programa é educacional e não substitui acompanhamento médico ou nutricional individual. Resultados variam de pessoa para pessoa. Gestantes, lactantes e pessoas com condições médicas específicas devem consultar profissional antes de iniciar.</p>
+    <p class="legal">Hellena Vasconcellos Medicina e Especialidades Ltda · CNPJ 27.213.901/7211-09</p>
+  </div>
+</footer>
+
+</body>
+</html>
