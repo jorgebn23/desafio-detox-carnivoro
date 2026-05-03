@@ -250,12 +250,6 @@ fbq('track', 'PageView');
   .faq-item.open .faq-q .icon{transform:rotate(45deg)}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:14px;color:#555;line-height:1.6}
   .faq-item.open .faq-a{max-height:420px;padding-bottom:16px}
-  .lead-form{background:#fff;border:2px solid #171717;border-radius:14px;padding:22px}
-  .lead-form label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#171717}
-  .lead-form input{width:100%;padding:14px;border:1px solid #ddd;border-radius:8px;font-size:16px;font-family:inherit;margin-bottom:14px;-webkit-appearance:none}
-  .lead-form input:focus{outline:none;border-color:#e11d48}
-  .lead-form .err{color:#e11d48;font-size:12px;margin-top:-10px;margin-bottom:10px;display:none}
-  .lead-form .err.show{display:block}
   footer{background:#171717;color:#bbb;padding:28px 0;font-size:13px;text-align:center;line-height:1.7}
   footer p{color:#bbb;margin-bottom:8px}
   footer a{color:#fff;text-decoration:underline}
@@ -319,7 +313,7 @@ fbq('track', 'PageView');
     <div class="authority-line">Nutricionista · Especialista em Emagrecimento Inteligente e Comportamento Alimentar</div>
     <h1>21 Dias para Emagrecer <strong>Sem Fome e Sem Inchaço</strong> — mesmo depois dos 35</h1>
     <p class="sub">Plano de alta proteína feito para o seu corpo de hoje. Controle a fome, reduza o inchaço e volte a emagrecer sem academia, sem contar calorias e sem dieta complicada.</p>
-    <button type="button" class="cta-btn" onclick="scrollToForm()">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
+    <button type="button" class="cta-btn" onclick="window.location.href='https://checkout.perfectpay.com.br/pay/PPU38CQBDAU'">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
     <p class="micro">Acesso imediato. Cobrança única. Garantia de 7 dias.</p>
   </div>
 </header>
@@ -477,7 +471,7 @@ fbq('track', 'PageView');
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.5 3.5 10.5 8 12 4.5-1.5 8-6.5 8-12V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
         <span>Garantia incondicional de 7 dias</span>
       </div>
-      <button type="button" class="cta-btn" onclick="scrollToForm()">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
+      <button type="button" class="cta-btn" onclick="window.location.href='https://checkout.perfectpay.com.br/pay/PPU38CQBDAU'">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
       <p class="micro">Acesso imediato. Cobrança única. Garantia de 7 dias.</p>
       <div class="badges">
         <div class="badge">✓ Pagamento seguro: Pix ou cartão [confirmar checkout]</div>
@@ -581,21 +575,11 @@ fbq('track', 'PageView');
 
 <!-- 12. FORM + CTA FINAL -->
 <section id="form" class="alt">
-  <div class="container">
+  <div class="container" style="text-align:center">
     <h2>Comece <strong>agora mesmo</strong></h2>
-    <p class="center" style="margin-bottom:18px;color:#555;font-size:15px">Preencha seus dados para liberar o acesso ao checkout seguro:</p>
-    <form class="lead-form" id="leadForm" novalidate>
-      <label for="nome">Seu primeiro nome</label>
-      <input type="text" id="nome" name="nome" placeholder="Ex: Maria" required autocomplete="given-name">
-      <div class="err" id="errNome">Digite seu nome para continuar.</div>
-
-      <label for="email">Seu melhor e-mail</label>
-      <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email">
-      <div class="err" id="errEmail">Digite um e-mail válido.</div>
-
-      <button type="submit" class="cta-btn">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
-      <p class="micro center">Acesso imediato. Cobrança única. Garantia de 7 dias.<br>Esta oferta personalizada está disponível apenas uma vez por CPF.</p>
-    </form>
+    <p class="center" style="margin-bottom:18px;color:#555;font-size:15px">Acesso imediato após o pagamento. Garantia de 7 dias.</p>
+    <button type="button" class="cta-btn" onclick="window.location.href='https://checkout.perfectpay.com.br/pay/PPU38CQBDAU'">QUERO PARAR DE SOFRER COM FOME E INCHAÇO — R$29</button>
+    <p class="micro center" style="margin-top:12px">Cobrança única. Sem assinatura. Garantia de 7 dias.</p>
   </div>
 </section>
 
@@ -987,67 +971,7 @@ fbq('track', 'PageView');
     });
   });
 
-  // === FORM SUBMIT ===
-  var form=document.getElementById('leadForm');
-  var nome=document.getElementById('nome');
-  var email=document.getElementById('email');
-  var errN=document.getElementById('errNome');
-  var errE=document.getElementById('errEmail');
-  var emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function getUTMs(){
-    var p=new URLSearchParams(window.location.search);
-    var utms=[];
-    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){
-      var v=p.get(k);
-      if(v) utms.push(k+'='+encodeURIComponent(v));
-    });
-    return utms.join('&');
-  }
-
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var ok=true;
-    errN.classList.remove('show');
-    errE.classList.remove('show');
-    if(!nome.value.trim()){errN.classList.add('show');ok=false}
-    if(!emailRe.test(email.value.trim())){errE.classList.add('show');ok=false}
-    if(!ok)return;
-    var lead={nome:nome.value.trim(),email:email.value.trim().toLowerCase(),ts:new Date().toISOString()};
-    try{sessionStorage.setItem('ddc_lead',JSON.stringify(lead))}catch(e){}
-
-    // TODO: enviar para webhook/CRM antes de redirecionar
-    // Trigger pixel event quando pixel ativo: if(typeof fbq==='function'){fbq('track','Lead')}
-
-    var checkoutBase='https://checkout.perfectpay.com.br/pay/PPU38CQBDAU';
-    var utms=getUTMs();
-    var url=checkoutBase+'?name='+encodeURIComponent(lead.nome)+'&email='+encodeURIComponent(lead.email)+(utms?'&'+utms:'');
-    window.location.href=url;
-  });
 })();
-
-function scrollToForm(){
-  var el=document.getElementById('form');
-  if(!el)return;
-  var imgs=document.querySelectorAll('.sales-page img');
-  imgs.forEach(function(img){img.removeAttribute('loading');});
-  function doScroll(){
-    requestAnimationFrame(function(){
-      requestAnimationFrame(function(){
-        el.scrollIntoView({behavior:'smooth',block:'start'});
-      });
-    });
-  }
-  var pending=0;
-  imgs.forEach(function(img){
-    if(!img.complete){
-      pending++;
-      img.addEventListener('load',function(){if(--pending===0)doScroll();},{once:true});
-      img.addEventListener('error',function(){if(--pending===0)doScroll();},{once:true});
-    }
-  });
-  if(pending===0)doScroll();
-}
 
 function openModal(id){
   var el=document.getElementById('modal-'+id);
